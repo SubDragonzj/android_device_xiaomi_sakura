@@ -16,6 +16,7 @@ persist.dirac.acs.storeSettings=1 \
 persist.vendor.audio.fluence.speaker=true \
 persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=false \
+ro.config.media_vol_steps=25 \
 ro.config.vc_call_vol_steps=7 \
 persist.vendor.audio.hw.binder.size_kbyte=1024 \
 persist.vendor.btstack.enable.splita2dp=false \
