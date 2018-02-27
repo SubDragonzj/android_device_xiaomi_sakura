@@ -226,7 +226,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
