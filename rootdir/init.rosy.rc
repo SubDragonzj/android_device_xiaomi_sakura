@@ -15,3 +15,9 @@ service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
     # Peel IR
     chown system system /dev/peel_ir
     chmod 0660 /dev/peel_ir
+
+# fingerprint-goodix
+service goodix_script /vendor/bin/init.goodix.sh
+    class late_start
+    user root
+    oneshot

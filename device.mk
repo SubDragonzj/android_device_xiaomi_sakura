@@ -322,7 +322,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
-    set_baseband.sh
+    set_baseband.sh \
+    init.goodix.sh
 
 # IPA Manager
 PRODUCT_PACKAGES += \
