@@ -289,6 +289,11 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-mokee
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.use_trim_settings=true \
@@ -479,3 +484,6 @@ PRODUCT_COPY_FILES += \
 # Privileged app
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+
+# Inherit proprietary files
+$(call inherit-product-if-exists, vendor/xiaomi/rosy/rosy-vendor.mk)
