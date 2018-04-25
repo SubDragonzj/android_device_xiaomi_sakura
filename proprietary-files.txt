@@ -1891,5 +1891,5 @@ etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
 -etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml
 
 # Lights - from rosy
-vendor/lib/hw/lights.msm8953.so
-vendor/lib64/hw/lights.msm8953.so
+lib/hw/lights.msm8953.so:vendor/lib/hw/lights.msm8953.so
+lib64/hw/lights.msm8953.so:vendor/lib64/hw/lights.msm8953.so
