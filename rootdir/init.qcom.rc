@@ -113,13 +113,8 @@ on boot
     chown root system /sys/class/leds/infrared/brightness
 
     # Notification LEDs
-    chown root system /sys/class/leds/blue/blink
-    chown root system /sys/class/leds/cyan/blink
-    chown root system /sys/class/leds/green/blink
-    chown root system /sys/class/leds/purple/blink
-    chown root system /sys/class/leds/red/blink
-    chown root system /sys/class/leds/white/blink
-    chown root system /sys/class/leds/yellow/blink
+    chown root system /sys/class/leds/*/blink
+    chown root system /sys/class/leds/*/brightness
 
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
@@ -282,7 +277,6 @@ service cnd /vendor/bin/cnd
     class main
     user system
     group system wifi inet radio wakelock net_admin
-    writepid /dev/cpuset/system-background/tasks
 
 service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
@@ -300,13 +294,11 @@ service rmt_storage /vendor/bin/rmt_storage
     group system wakelock
     shutdown critical
     ioprio rt 0
-    writepid /dev/cpuset/system-background/tasks
 
 service tftp_server /vendor/bin/tftp_server
     class main
     user root
     group root system
-    writepid /dev/cpuset/system-background/tasks
 
 service hciattach /vendor/bin/hci_qcomm_init -e
     class late_start
@@ -333,13 +325,11 @@ service netmgrd /vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet
-    writepid /dev/cpuset/system-background/tasks
 
 service qti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb
-    writepid /dev/cpuset/system-background/tasks
 
 service baseband-sh /vendor/bin/init.qcom.baseband.sh
     class late_start
@@ -356,7 +346,6 @@ service sensors /vendor/bin/sensors.qcom
     class core
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
@@ -382,7 +371,6 @@ service loc_launcher /vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
-    writepid /dev/cpuset/system-background/tasks
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
