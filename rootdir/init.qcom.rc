@@ -399,6 +399,11 @@ service charger /charger
     class charger
     group system graphics
     seclabel u:r:healthd:s0
+    
+service kernel_loggy /vendor/bin/kernel_loggy.sh
+    class core
+    user root
+    oneshot
 
 service time_daemon /vendor/bin/time_daemon
     class main

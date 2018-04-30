@@ -222,6 +222,11 @@ PRODUCT_PACKAGES += \
     init.qcom.baseband.sh \
     init.qcom.graphics.sh
 
+ifeq ($(WITH_EXTRA_DBG),true)
+PRODUCT_PACKAGES += \
+    kernel_loggy.sh
+endif
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
