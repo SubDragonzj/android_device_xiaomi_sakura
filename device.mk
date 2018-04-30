@@ -28,7 +28,6 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -55,22 +54,25 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=2 \
-    audio.deep_buffer.media=true \
-    audio.offload.disable=true \
-    audio.offload.min.duration.secs=30 \
-    audio.offload.video=true \
+    vendor.voice.playback.conc.disabled=true \
+    vendor.voice.record.conc.disabled=false \
+    vendor.voice.voip.conc.disabled=true \
+    vendor.voice.conc.fallbackpath=deep-buffer \
+    vendor.audio.parser.ip.buffer.size=0 \
+    vendor.audio_hal.period_size=192 \
+    ro.vendor.audio.sdk.ssr=false \
+    ro.vendor.audio.sdk.fluencetype=fluence \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.fluence.speaker=true \
-    persist.vendor.audio.speaker.prot.enable=false \
-    ro.vendor.audio.sdk.ssr=false \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    audio.parser.ip.buffer.size=262144 \
-    vendor.audio_hal.period_size=192 \
+    persist.vendor.bt.enable.splita2dp=false \
+    audio.offload.disable=true \
     vendor.audio.tunnel.encode=false \
     vendor.audio.offload.buffer.size.kb=64 \
+    audio.offload.min.duration.secs=30 \
+    audio.offload.video=true \
     vendor.audio.offload.track.enable=true \
+    audio.deep_buffer.media=true \
     vendor.audio.playback.mch.downsample=true \
     vendor.voice.path.for.pcm.voip=true \
     vendor.audio.use.sw.alac.decoder=true \
@@ -80,13 +82,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.safx.pbe.enabled=true \
     vendor.audio.pp.asphere.enabled=false \
     vendor.audio.dolby.ds2.enabled=true \
-    vendor.audio.dolby.ds2.hardbypass=true \
+    af.fast_track_multiplier=2 \
+    persist.vendor.audio.speaker.prot.enable=false \
     vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.voice.playback.conc.disabled=true \
-    vendor.voice.record.conc.disabled=false \
-    vendor.voice.voip.conc.disabled=true \
-    vendor.voice.conc.fallbackpath=deep-buffer
+    vendor.audio.dolby.ds2.hardbypass=true \
+    vendor.audio.flac.sw.decoder.24bit=true
 
 # Audio HAL
 PRODUCT_PACKAGES += \
@@ -132,8 +132,6 @@ PRODUCT_PACKAGES += \
     copybit.msm8953 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
-    libdisplayconfig \
-    libqdMetaData.system \
     libtinyxml \
     memtrack.msm8953
 
@@ -147,8 +145,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
 
 # Display calibration
-PRODUCT_PACKAGES += \
-    vendor.mokee.livedisplay@1.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    vendor.mokee.livedisplay@1.0-service-sdm
 
 # Display HAL
 PRODUCT_PACKAGES += \
@@ -165,10 +163,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Doze
 PRODUCT_PACKAGES += \
     XiaomiDoze
-
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -267,7 +261,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
     media.aac_51_output_enabled=true \
     mm.enable.smoothstreaming=true \
     vendor.audio.hw.aac.encoder=true \
@@ -380,6 +373,10 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
+    
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_rosy
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -388,6 +385,10 @@ PRODUCT_PACKAGES += \
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
+    
+# SdcardFs
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
