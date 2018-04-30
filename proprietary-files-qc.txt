@@ -90,7 +90,7 @@ vendor/lib64/libxml.so
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
 # Consumer Ir
-lib64/hw/consumerir.default.so
+lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so
 
 # DRM
 bin/qseecomd
