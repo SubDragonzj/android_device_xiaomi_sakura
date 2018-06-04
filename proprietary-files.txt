@@ -1,18 +1,4 @@
 # Audio ACDB - from rosy
-etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-etc/acdbdata/MTP/MTP_General_cal.acdb:vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
-etc/acdbdata/MTP/MTP_Global_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
-etc/acdbdata/MTP/MTP_Handset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
-etc/acdbdata/MTP/MTP_Hdmi_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-etc/acdbdata/MTP/MTP_Headset_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
-etc/acdbdata/MTP/MTP_Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_General_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_General_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Global_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Global_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb:vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb
 etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 etc/acdbdata/QRD/QRD_General_cal.acdb:vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
 etc/acdbdata/QRD/QRD_Global_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
@@ -20,23 +6,7 @@ etc/acdbdata/QRD/QRD_Handset_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Handset_cal.ac
 etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 etc/acdbdata/QRD/QRD_Headset_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
-
-# Bluetooth - from rosy
-bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
-vendor/lib/libbtnv.so
-vendor/lib64/libbtnv.so
-
-# BT Firmware - from rosy
-etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin:vendor/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin:vendor/firmware/nvm_tlv_3.2.bin
-etc/firmware/rampatch_tlv.img:vendor/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
+etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera - from rosy
 vendor/lib/libchromaflash.so
@@ -89,66 +59,66 @@ vendor/lib/libactuator_rohm_bu64243gwz.so
 # Camera chromatix - from rosy
 bin/mm-qcamera-app:vendor/bin/mm-qcamera-app
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-etc/camera/camera_config.xml
-etc/camera/csidtg_camera.xml
-etc/camera/csidtg_chromatix.xml
-etc/camera/imx214_chromatix.xml
-etc/camera/imx230_chromatix.xml
-etc/camera/imx230_qc2002_chromatix.xml
-etc/camera/imx258_bear_chromatix.xml
-etc/camera/imx258_chromatix.xml
-etc/camera/imx258_mono_bear_chromatix.xml
-etc/camera/imx258_mono_chromatix.xml
-etc/camera/imx298_chromatix.xml
-etc/camera/imx298_gt24c64_chromatix.xml
-etc/camera/imx318_chromatix.xml
-etc/camera/imx362_chromatix.xml
-etc/camera/imx362_chromatix_bear.xml
-etc/camera/imx378_chromatix.xml
-etc/camera/ov13850_chromatix.xml
-etc/camera/ov13850_q13v06k_chromatix.xml
-etc/camera/ov13855_qtech_chromatix.xml
-etc/camera/ov13855_qtech_india_chromatix.xml
-etc/camera/ov13855_sunny_chromatix.xml
-etc/camera/ov2281_chromatix.xml
-etc/camera/ov2680_chromatix.xml
-etc/camera/ov4688_chromatix.xml
-etc/camera/ov5670_chromatix.xml
-etc/camera/ov5670_f5670bq_chromatix.xml
-etc/camera/ov5675_d5v15b_chromatix.xml
-etc/camera/ov5675_ofilm_chromatix.xml
-etc/camera/ov5695_chromatix.xml
-etc/camera/ov7251_chromatix.xml
-etc/camera/ov8858_chromatix.xml
-etc/camera/ov8865_chromatix.xml
-etc/camera/ovt_ov12a10_i_chromatix.xml
-etc/camera/ovt_ov5675_i_chromatix.xml
-etc/camera/ovt_ov5675_ii_chromatix.xml
-etc/camera/rosy_imx486_sunny_india_chromatix.xml
-etc/camera/rosy_ov12a10_ofilm_india_chromatix.xml
-etc/camera/rosy_ov5675_ofilm_india_chromatix.xml
-etc/camera/rosy_ov5675_qtech_india_chromatix.xml
-etc/camera/s5k2l7_8953_chromatix.xml
-etc/camera/s5k2l7_chromatix.xml
-etc/camera/s5k3l2_chromatix.xml
-etc/camera/s5k3l8_chromatix.xml
-etc/camera/s5k3l8_f3l8yam_chromatix.xml
-etc/camera/s5k3l8_mono_chromatix.xml
-etc/camera/s5k3l8_ofilm_chromatix.xml
-etc/camera/s5k3l8_ofilm_riva_chromatix.xml
-etc/camera/s5k3l8_ofilm_riva_india_chromatix.xml
-etc/camera/s5k3m2xm_chromatix.xml
-etc/camera/s5k3m2xm_chromatix_bear.xml
-etc/camera/s5k3m2xx_chromatix.xml
-etc/camera/s5k3p3sm_chromatix.xml
-etc/camera/s5k5e8_chromatix.xml
-etc/camera/s5k5e8_ofilm_chromatix.xml
-etc/camera/s5k5e8_ofilm_riva_chromatix.xml
-etc/camera/s5k5e8_ofilm_riva_india_chromatix.xml
-etc/camera/s5k5e8_qtech_riva_chromatix.xml
-etc/camera/s5k5e8_qtech_riva_india_chromatix.xml
-etc/camera/s5k5e8_sunny_chromatix.xml
-etc/camera/sony_imx486_ii_chromatix.xml
+etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
+etc/camera/csidtg_camera.xml:vendor/etc/camera/csidtg_camera.xml
+etc/camera/csidtg_chromatix.xml:vendor/etc/camera/csidtg_chromatix.xml
+etc/camera/imx214_chromatix.xml:vendor/etc/camera/imx214_chromatix.xml
+etc/camera/imx230_chromatix.xml:vendor/etc/camera/imx230_chromatix.xml
+etc/camera/imx230_qc2002_chromatix.xml:vendor/etc/camera/mx230_qc2002_chromatix.xml
+etc/camera/imx258_bear_chromatix.xml:vendor/etc/camera/imx258_bear_chromatix.xml
+etc/camera/imx258_chromatix.xml:vendor/etc/camera/imx258_chromatix.xml
+etc/camera/imx258_mono_bear_chromatix.xml:vendor/etc/camera/imx258_mono_bear_chromatix.xml
+etc/camera/imx258_mono_chromatix.xml:vendor/etc/camera/imx258_mono_chromatix.xml
+etc/camera/imx298_chromatix.xml:vendor/etc/camera/imx298_chromatix.xml
+etc/camera/imx298_gt24c64_chromatix.xml:vendor/etc/camera/imx298_gt24c64_chromatix.xml
+etc/camera/imx318_chromatix.xml:vendor/etc/camera/imx318_chromatix.xml
+etc/camera/imx362_chromatix.xml:vendor/etc/camera/imx362_chromatix.xml
+etc/camera/imx362_chromatix_bear.xml:vendor/etc/camera/imx362_chromatix_bear.xml
+etc/camera/imx378_chromatix.xml:vendor/etc/camera/imx378_chromatix.xml
+etc/camera/ov13850_chromatix.xml:vendor/etc/camera/ov13850_chromatix.xml
+etc/camera/ov13850_q13v06k_chromatix.xml:vendor/etc/camera/ov13850_q13v06k_chromatix.xml
+etc/camera/ov13855_qtech_chromatix.xml:vendor/etc/camera/ov13855_qtech_chromatix.xml
+etc/camera/ov13855_qtech_india_chromatix.xml:vendor/etc/camera/ov13855_qtech_india_chromatix.xml
+etc/camera/ov13855_sunny_chromatix.xml:vendor/etc/camera/ov13855_sunny_chromatix.xml
+etc/camera/ov2281_chromatix.xml:vendor/etc/camera/ov2281_chromatix.xml
+etc/camera/ov2680_chromatix.xml:vendor/etc/camera/ov2680_chromatix.xml
+etc/camera/ov4688_chromatix.xml:vendor/etc/camera/ov4688_chromatix.xml
+etc/camera/ov5670_chromatix.xml:vendor/etc/camera/ov5670_chromatix.xml
+etc/camera/ov5670_f5670bq_chromatix.xml:vendor/etc/camera/ov5670_f5670bq_chromatix.xml
+etc/camera/ov5675_d5v15b_chromatix.xml:vendor/etc/camera/ov5675_d5v15b_chromatix.xml
+etc/camera/ov5675_ofilm_chromatix.xml:vendor/etc/camera/ov5675_ofilm_chromatix.xml
+etc/camera/ov5695_chromatix.xml:vendor/etc/camera/v5695_chromatix.xml
+etc/camera/ov7251_chromatix.xml:vendor/etc/camera/ov7251_chromatix.xml
+etc/camera/ov8858_chromatix.xml:vendor/etc/camera/ov8858_chromatix.xml
+etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml
+etc/camera/ovt_ov12a10_i_chromatix.xml:vendor/etc/camera/ovt_ov12a10_i_chromatix.xml
+etc/camera/ovt_ov5675_i_chromatix.xml:vendor/etc/camera/ovt_ov5675_i_chromatix.xml
+etc/camera/ovt_ov5675_ii_chromatix.xml:vendor/etc/camera/ovt_ov5675_ii_chromatix.xml
+etc/camera/rosy_imx486_sunny_india_chromatix.xml:vendor/etc/camera/rosy_imx486_sunny_india_chromatix.xml
+etc/camera/rosy_ov12a10_ofilm_india_chromatix.xml:vendor/etc/camera/rosy_ov12a10_ofilm_india_chromatix.xml
+etc/camera/rosy_ov5675_ofilm_india_chromatix.xml:vendor/etc/camera/rosy_ov5675_ofilm_india_chromatix.xml
+etc/camera/rosy_ov5675_qtech_india_chromatix.xml:vendor/etc/camera/rosy_ov5675_qtech_india_chromatix.xml
+etc/camera/s5k2l7_8953_chromatix.xml:vendor/etc/camera/s5k2l7_8953_chromatix.xml
+etc/camera/s5k2l7_chromatix.xml:vendor/etc/camera/s5k2l7_chromatix.xml
+etc/camera/s5k3l2_chromatix.xml:vendor/etc/camera/s5k3l2_chromatix.xml
+etc/camera/s5k3l8_chromatix.xml:vendor/etc/camera/s5k3l8_chromatix.xml
+etc/camera/s5k3l8_f3l8yam_chromatix.xml:vendor/etc/camera/s5k3l8_f3l8yam_chromatix.xml
+etc/camera/s5k3l8_mono_chromatix.xml:vendor/etc/camera/s5k3l8_mono_chromatix.xml
+etc/camera/s5k3l8_ofilm_chromatix.xml:vendor/etc/camera/s5k3l8_ofilm_chromatix.xml
+etc/camera/s5k3l8_ofilm_riva_chromatix.xml:vendor/etc/camera/s5k3l8_ofilm_riva_chromatix.xml
+etc/camera/s5k3l8_ofilm_riva_india_chromatix.xml:vendor/etc/camera/s5k3l8_ofilm_riva_india_chromatix.xml
+etc/camera/s5k3m2xm_chromatix.xml:vendor/etc/camera/s5k3m2xm_chromatix.xml
+etc/camera/s5k3m2xm_chromatix_bear.xml:vendor/etc/camera/s5k3m2xm_chromatix_bear.xml
+etc/camera/s5k3m2xx_chromatix.xml:vendor/etc/camera/s5k3m2xx_chromatix.xml
+etc/camera/s5k3p3sm_chromatix.xml:vendor/etc/camera/s5k3p3sm_chromatix.xml
+etc/camera/s5k5e8_chromatix.xml:vendor/etc/camera/s5k5e8_chromatix.xml
+etc/camera/s5k5e8_ofilm_chromatix.xml:vendor/etc/camera/s5k5e8_ofilm_chromatix.xml
+etc/camera/s5k5e8_ofilm_riva_chromatix.xml:vendor/etc/camera/s5k5e8_ofilm_riva_chromatix.xml
+etc/camera/s5k5e8_ofilm_riva_india_chromatix.xml:vendor/etc/camera/s5k5e8_ofilm_riva_india_chromatix.xml
+etc/camera/s5k5e8_qtech_riva_chromatix.xml:vendor/etc/camera/s5k5e8_qtech_riva_chromatix.xml
+etc/camera/s5k5e8_qtech_riva_india_chromatix.xml:vendor/etc/camera/s5k5e8_qtech_riva_india_chromatix.xml
+etc/camera/s5k5e8_sunny_chromatix.xml:vendor/etc/camera/s5k5e8_sunny_chromatix.xml
+etc/camera/sony_imx486_ii_chromatix.xml:vendor/etc/camera/sony_imx486_ii_chromatix.xml
 vendor/lib/libchromatix_csidtg_common.so
 vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
@@ -1695,6 +1665,7 @@ vendor/lib/libchromatix_sony_imx486_ii_zsl_video_dw9714v.so
 
 # Camera mmcamera - from rosy
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
@@ -1852,6 +1823,7 @@ vendor/lib64/libmmcamera_cac3_lib.so
 vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
+
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_dcrf.so
@@ -1873,23 +1845,14 @@ vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
 
-# Camera firmware - from rosy
-etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_4_0.fw:vendor/firmware/cpp_firmware_v1_4_0.fw
-etc/firmware/cpp_firmware_v1_5_0.fw:vendor/firmware/cpp_firmware_v1_5_0.fw
-etc/firmware/cpp_firmware_v1_5_2.fw:vendor/firmware/cpp_firmware_v1_5_2.fw
-etc/firmware/cpp_firmware_v1_6_0.fw:vendor/firmware/cpp_firmware_v1_6_0.fw
-etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
-etc/firmware/cpp_firmware_v1_10_0.fw:vendor/firmware/cpp_firmware_v1_10_0.fw
-etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
+# Charger - from rosy
+bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
 # Display calibration - from rosy
--etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml
--etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml
--etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml
+-etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml
+-etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml
+-etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml
 
-# Lights - from rosy
-lib/hw/lights.msm8953.so:vendor/lib/hw/lights.msm8953.so
-lib64/hw/lights.msm8953.so:vendor/lib64/hw/lights.msm8953.so
+# Graphics firmware - from rosy
+etc/firmware/a506_zap.mdt:vendor/firmware/a506_zap.mdt
+
