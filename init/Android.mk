@@ -21,15 +21,11 @@ include $(CLEAR_VARS)
 LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
-LOCAL_CFLAGS := -Wall
+LOCAL_MODULE := libinit_rosy
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := init_rosy.cpp
 LOCAL_STATIC_LIBRARIES := \
-    libbase
-
-ifneq ($(TARGET_LIBINIT_ROSY_DEFINES_FILE),)
-    LOCAL_SRC_FILES += ../../../../$(TARGET_LIBINIT_ROSY_DEFINES_FILE)
-endif
-LOCAL_MODULE := libinit_rosy
+    libbase \
+    libselinux
 
 include $(BUILD_STATIC_LIBRARY)

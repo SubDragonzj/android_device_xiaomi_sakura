@@ -34,20 +34,20 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/sysinfo.h>
+#include <unistd.h>
 
 #include <android-base/file.h>
 #include <android-base/properties.h>
 #include <android-base/strings.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
-
-#include "init_rosy.h"
+#include "property_service.h"
 
 using android::base::GetProperty;
 using android::init::property_set;
 using android::base::ReadFileToString;
 using android::base::Trim;
+using android::init::property_set;
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -56,8 +56,14 @@ char const *heapminfree;
 char const *heapmaxfree;
 char const *large_cache_height;
 
-__attribute__ ((weak))
-void init_target_properties() {}
+static void init_finger_print_properties()
+{
+	if (access("/persist/data/fingerprint_version", 0) == -1) {
+		property_set("ro.boot.fingerprint", "fpc");
+	} else {
+		property_set("ro.boot.fingerprint", "goodix");
+	}
+}
 
 static void init_alarm_boot_properties()
 {
@@ -93,6 +99,28 @@ static void init_alarm_boot_properties()
     }
 }
 
+static void init_setup_model_properties()
+{
+    std::ifstream fin;
+    std::string buf;
+
+    std::string product = GetProperty("ro.product.name", "");
+    if (product.find("rosy") == std::string::npos)
+        return;
+
+    fin.open("/proc/cmdline");
+    while (std::getline(fin, buf, ' '))
+        if (buf.find("product.region") != std::string::npos)
+            break;
+    fin.close();
+
+    if (buf.find("India") != std::string::npos) {
+        property_set("ro.product.model", "Redmi Note 5");
+    } else {
+        property_set("ro.product.model", "Redmi 5 Plus");
+    }
+}
+
 void check_device()
 {
     struct sysinfo sys;
@@ -115,21 +143,15 @@ void check_device()
         heapminfree = "512k";
 	heapmaxfree = "8m";
         large_cache_height = "1024";
-    } else {
-        // from - phone-xxhdpi-2048-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "192m";
-        heapsize = "512m";
-        heapminfree = "2m";
-        heapmaxfree = "8m";
-        large_cache_height = "1024";
-   }
+    }
 }
 
 void vendor_load_properties()
 {
     init_alarm_boot_properties();
     check_device();
+    init_finger_print_properties();
+    init_setup_model_properties();
 
     property_set("dalvik.vm.heapstartsize", heapstartsize);
     property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
@@ -149,6 +171,4 @@ void vendor_load_properties()
     property_set("ro.hwui.text_small_cache_height", "1024");
     property_set("ro.hwui.text_large_cache_width", "2048");
     property_set("ro.hwui.text_large_cache_height", large_cache_height);
-
-    init_target_properties();
 }
