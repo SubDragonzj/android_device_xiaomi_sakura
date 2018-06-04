@@ -1,0 +1,8 @@
+on boot
+    # Double Tap to Wake
+    chown system system /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input1/wake_gesture
+    chmod 0660 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input1/wake_gesture
+
+    # Peel IR
+    chown system system /dev/peel_ir
+    chmod 0660 /dev/peel_ir
