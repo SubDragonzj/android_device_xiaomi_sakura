@@ -137,8 +137,11 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_HAS_NO_WIFI_STATS := true
 TARGET_RIL_VARIANT := caf
+
+# Power
+TARGET_HAS_LEGACY_POWER_STATS := true
+TARGET_HAS_NO_WIFI_STATS := true
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
