@@ -59,7 +59,7 @@ TARGET_USES_NEW_ION_API := true
 USE_OPENGL_RENDERER := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/78b7000.i2c/i2c-3/3-0038/input/input1/wake_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 67108864
