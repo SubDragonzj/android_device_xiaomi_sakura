@@ -58,6 +58,9 @@ USE_OPENGL_RENDERER := true
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 268435456
