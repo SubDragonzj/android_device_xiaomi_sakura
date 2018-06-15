@@ -372,7 +372,8 @@ PRODUCT_COPY_FILES += \
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
-    libfmjni
+    libqcomfm_jni \
+    qcom.fmradio
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
