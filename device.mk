@@ -174,10 +174,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.camera.ts.monotonic=1 \
     persist.camera.gyro.android=1 \
     persist.camera.is_type=1 \
-    vendor.vidc.debug.perf.mode=2 \
     vendor.vidc.enc.dcvs.extra-buff-count=2 \
     vendor.vidc.enc.disable.pq=true \
     persist.camera.HAL3.enabled=1
+
+PRODUCT_PACKAGES += \
+    Snap
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -358,10 +360,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.am.reschedule_service=true \
     ro.sys.fw.use_trim_settings=true \
     ro.vendor.extension_library=libqti-perfd-client.so
-
-# Snap
-PRODUCT_PACKAGES += \
-    Snap
 
 # Vulkan
 PRODUCT_COPY_FILES += \
