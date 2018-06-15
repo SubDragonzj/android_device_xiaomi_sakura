@@ -222,8 +222,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=440 \
-    qemu.hw.mainkeys=0
+    ro.sf.lcd_density=440
 
 # DRM
 PRODUCT_PACKAGES += \
