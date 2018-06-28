@@ -310,7 +310,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.qcom.post_boot.sh
+    init.qcom.post_boot.sh \
+    set_baseband.sh
 
 # IPA Manager
 PRODUCT_PACKAGES += \

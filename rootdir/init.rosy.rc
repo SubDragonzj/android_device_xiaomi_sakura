@@ -1,4 +1,13 @@
 on boot
+
+    start baseband-sh
+
+service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
+    class late_start
+    user root
+    oneshot
+    disabled
+
     # Double Tap to Wake
     chown system system /proc/gesture/onoff
     chmod 0660 /proc/gesture/onoff
