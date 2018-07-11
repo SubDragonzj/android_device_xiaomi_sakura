@@ -9,13 +9,6 @@ etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Speaker_cal.ac
 etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera - from rosy
-bin/mm-qcamera-app:vendor/bin/mm-qcamera-app
-lib/hw/camera.msm8953.so:vendor/lib/hw/camera.msm8953.so
-lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
-lib/libmorpho_memory_allocator.so:vendor/lib/libmorpho_memory_allocator.so
-lib64/libmorpho_memory_allocator.so:vendor/lib64/libmorpho_memory_allocator.so
-lib/libmorpho_panorama.so:vendor/lib/libmorpho_panorama.so
-lib64/libmorpho_panorama.so:vendor/lib64/libmorpho_panorama.so
 vendor/lib/libllvd_smore.so
 vendor/lib/libChamomilePA.so
 vendor/lib64/libChamomilePA.so
@@ -23,18 +16,9 @@ vendor/lib/libscvePanorama.so
 vendor/lib64/libscvePanorama.so
 vendor/lib/libscvePanorama_lite.so
 vendor/lib64/libscvePanorama_lite.so
-vendor/lib/libarcsoft_beautyshot.so
-vendor/lib/libarcsoft_beauty_shot.so
-vendor/lib/libarcsoft_beautyshot_image_algorithm.so
-vendor/lib/libarcsoft_beautyshot_video_algorithm.so
 vendor/lib/lib_lowlight.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/libcaffe.so
-vendor/lib/libmorpho_easy_hdr.so
-vendor/lib/libmorpho_hdr_checker.so
-vendor/lib/libmorpho_panorama_gp.so
-vendor/lib64/libmorpho_panorama_gp.so
-vendor/lib/libFaceGrade.so
 vendor/lib/libmpbase.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_gpio.so
@@ -45,10 +29,6 @@ vendor/lib/libjpegehw.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
-vendor/lib/libmmsw_detail_enhancement.so
-vendor/lib/libmmsw_math.so
-vendor/lib/libmmsw_opencl.so
-vendor/lib/libmmsw_platform.so
 vendor/lib/libois_lc898122.so
 vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
@@ -1705,9 +1685,6 @@ vendor/lib/libchromatix_sony_imx486_ii_cpp_snapshot_hht.so
 vendor/lib/libchromatix_sony_imx486_ii_india_cpp_snapshot_hht.so
 
 # Camera mmcamera - from rosy
-lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
-lib/libqomx_core.so:vendor/lib/libqomx_core.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so

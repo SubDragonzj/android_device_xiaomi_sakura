@@ -163,6 +163,10 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.msm8953 \
+    libmm-qcamera
+
+PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
@@ -170,13 +174,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0_vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    camera.display.umax=1920x1080 \
+    camera.display.lmax=1280x720 \
     camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
     media.camera.ts.monotonic=1 \
     persist.camera.gyro.android=1 \
+    persist.camera.HAL3.enabled=0 \
     persist.camera.is_type=1 \
-    vendor.vidc.enc.dcvs.extra-buff-count=2 \
-    vendor.vidc.enc.disable.pq=true \
-    persist.camera.HAL3.enabled=1
+    vidc.enc.narrow.searchrange=1
 
 PRODUCT_PACKAGES += \
     Snap
