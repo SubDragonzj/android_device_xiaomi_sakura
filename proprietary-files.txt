@@ -9,6 +9,33 @@ etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Speaker_cal.ac
 etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera - from rosy
+bin/mm-qcamera-app:vendor/bin/mm-qcamera-app
+lib/hw/camera.msm8953.so:vendor/lib/hw/camera.msm8953.so
+lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
+lib/libmorpho_memory_allocator.so:vendor/lib/libmorpho_memory_allocator.so
+lib64/libmorpho_memory_allocator.so:vendor/lib64/libmorpho_memory_allocator.so
+lib/libmorpho_panorama.so:vendor/lib/libmorpho_panorama.so
+lib64/libmorpho_panorama.so:vendor/lib64/libmorpho_panorama.so
+vendor/lib/libllvd_smore.so
+vendor/lib/libChamomilePA.so
+vendor/lib64/libChamomilePA.so
+vendor/lib/libscvePanorama.so
+vendor/lib64/libscvePanorama.so
+vendor/lib/libscvePanorama_lite.so
+vendor/lib64/libscvePanorama_lite.so
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_beauty_shot.so
+vendor/lib/libarcsoft_beautyshot_image_algorithm.so
+vendor/lib/libarcsoft_beautyshot_video_algorithm.so
+vendor/lib/lib_lowlight.so
+vendor/lib/libXMFD_AgeGender.so
+vendor/lib/libcaffe.so
+vendor/lib/libmorpho_easy_hdr.so
+vendor/lib/libmorpho_hdr_checker.so
+vendor/lib/libmorpho_panorama_gp.so
+vendor/lib64/libmorpho_panorama_gp.so
+vendor/lib/libFaceGrade.so
+vendor/lib/libmpbase.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_gpio.so
 vendor/lib/libflash_pmic.so
@@ -32,6 +59,7 @@ vendor/lib/libseemore.so
 -vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
+vendor/lib/libremosaic_daemon.so
 
 # Camera actuators - from rosy
 vendor/lib/libactuator_ad5816g.so
@@ -56,15 +84,17 @@ vendor/lib/libactuator_ovt_ov12a10_i_dw9763.so
 vendor/lib/libactuator_pseudo.so
 vendor/lib/libactuator_rohm_bu64243gwz.so
 
-# Camera chromatix - from rosy
-bin/mm-qcamera-app:vendor/bin/mm-qcamera-app
+# QCOM Camera Daemon - from rosy
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+
+# Camera XML Configs - from rosy
 etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
 etc/camera/csidtg_camera.xml:vendor/etc/camera/csidtg_camera.xml
 etc/camera/csidtg_chromatix.xml:vendor/etc/camera/csidtg_chromatix.xml
 etc/camera/imx214_chromatix.xml:vendor/etc/camera/imx214_chromatix.xml
 etc/camera/imx230_chromatix.xml:vendor/etc/camera/imx230_chromatix.xml
 etc/camera/imx230_qc2002_chromatix.xml:vendor/etc/camera/mx230_qc2002_chromatix.xml
+etc/camera/imx230_qc2002_with_gyro_chromatix.xml:vendor/etc/camera/imx230_qc2002_with_gyro_chromatix.xml
 etc/camera/imx258_bear_chromatix.xml:vendor/etc/camera/imx258_bear_chromatix.xml
 etc/camera/imx258_chromatix.xml:vendor/etc/camera/imx258_chromatix.xml
 etc/camera/imx258_mono_bear_chromatix.xml:vendor/etc/camera/imx258_mono_bear_chromatix.xml
@@ -94,6 +124,7 @@ etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml
 etc/camera/ovt_ov12a10_i_chromatix.xml:vendor/etc/camera/ovt_ov12a10_i_chromatix.xml
 etc/camera/ovt_ov5675_i_chromatix.xml:vendor/etc/camera/ovt_ov5675_i_chromatix.xml
 etc/camera/ovt_ov5675_ii_chromatix.xml:vendor/etc/camera/ovt_ov5675_ii_chromatix.xml
+etc/camera/rosy_camera_india.xml:vendor/etc/camera/rosy_camera_india.xml
 etc/camera/rosy_imx486_sunny_india_chromatix.xml:vendor/etc/camera/rosy_imx486_sunny_india_chromatix.xml
 etc/camera/rosy_ov12a10_ofilm_india_chromatix.xml:vendor/etc/camera/rosy_ov12a10_ofilm_india_chromatix.xml
 etc/camera/rosy_ov5675_ofilm_india_chromatix.xml:vendor/etc/camera/rosy_ov5675_ofilm_india_chromatix.xml
@@ -119,6 +150,8 @@ etc/camera/s5k5e8_qtech_riva_chromatix.xml:vendor/etc/camera/s5k5e8_qtech_riva_c
 etc/camera/s5k5e8_qtech_riva_india_chromatix.xml:vendor/etc/camera/s5k5e8_qtech_riva_india_chromatix.xml
 etc/camera/s5k5e8_sunny_chromatix.xml:vendor/etc/camera/s5k5e8_sunny_chromatix.xml
 etc/camera/sony_imx486_ii_chromatix.xml:vendor/etc/camera/sony_imx486_ii_chromatix.xml
+
+# Camera chromatix - from rosy
 vendor/lib/libchromatix_csidtg_common.so
 vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
@@ -1662,10 +1695,19 @@ vendor/lib/libchromatix_sony_imx486_ii_preview.so
 vendor/lib/libchromatix_sony_imx486_ii_snapshot.so
 vendor/lib/libchromatix_sony_imx486_ii_zsl_preview_dw9714v.so
 vendor/lib/libchromatix_sony_imx486_ii_zsl_video_dw9714v.so
+vendor/lib/libchromatix_ovt_ov12a10_i_cpp_snapshot_hht.so
+vendor/lib/libchromatix_ovt_ov12a10_i_india_cpp_snapshot_hht.so
+vendor/lib/libchromatix_ovt_ov5675_i_cpp_snapshot_hht.so
+vendor/lib/libchromatix_ovt_ov5675_ii_cpp_snapshot_hht.so
+vendor/lib/libchromatix_ovt_ov5675_ii_india_cpp_snapshot_hht.so
+vendor/lib/libchromatix_ovt_ov5675_i_india_cpp_snapshot_hht.so
+vendor/lib/libchromatix_sony_imx486_ii_cpp_snapshot_hht.so
+vendor/lib/libchromatix_sony_imx486_ii_india_cpp_snapshot_hht.so
 
 # Camera mmcamera - from rosy
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
+lib/libqomx_core.so:vendor/lib/libqomx_core.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
@@ -1845,6 +1887,18 @@ vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
 
+# Camera firmware - from rosy
+etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw:vendor/firmware/cpp_firmware_v1_4_0.fw
+etc/firmware/cpp_firmware_v1_5_0.fw:vendor/firmware/cpp_firmware_v1_5_0.fw
+etc/firmware/cpp_firmware_v1_5_2.fw:vendor/firmware/cpp_firmware_v1_5_2.fw
+etc/firmware/cpp_firmware_v1_6_0.fw:vendor/firmware/cpp_firmware_v1_6_0.fw
+etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
+etc/firmware/cpp_firmware_v1_10_0.fw:vendor/firmware/cpp_firmware_v1_10_0.fw
+etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
+
 # Charger - from rosy
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
@@ -1854,5 +1908,43 @@ bin/hvdcp_opti:vendor/bin/hvdcp_opti
 -etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml
 
 # Graphics firmware - from rosy
+etc/firmware/a225p5_pm4.fw:vendor/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw:vendor/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw:vendor/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw:vendor/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw:vendor/firmware/a420_pm4.fw
+etc/firmware/a506_zap.b00:vendor/firmware/a506_zap.b00
+etc/firmware/a506_zap.b01:vendor/firmware/a506_zap.b01
+etc/firmware/a506_zap.b02:vendor/firmware/a506_zap.b02
+etc/firmware/a506_zap.elf:vendor/firmware/a506_zap.elf
 etc/firmware/a506_zap.mdt:vendor/firmware/a506_zap.mdt
+etc/firmware/a530_gpmu.fw2:vendor/firmware/a530_gpmu.fw2
+etc/firmware/a530_pfp.fw:vendor/firmware/a530_pfp.fw
+etc/firmware/a530_pm4.fw:vendor/firmware/a530_pm4.fw
+etc/firmware/a530v1_pfp.fw:vendor/firmware/a530v1_pfp.fw
+etc/firmware/a530v1_pm4.fw:vendor/firmware/a530v1_pm4.fw
+etc/firmware/a530v2_seq.fw2:vendor/firmware/a530v2_seq.fw2
+etc/firmware/a530v3_gpmu.fw2:vendor/firmware/a530v3_gpmu.fw2
+etc/firmware/a530v3_seq.fw2:vendor/firmware/a530v3_seq.fw2
+etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2
 
+# Bluetooth firmware - from rosy
+etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
+etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin:vendor/firmware/nvm_tlv_3.0.bin
+etc/firmware/nvm_tlv_3.2.bin:vendor/firmware/nvm_tlv_3.2.bin
+etc/firmware/rampatch_tlv.img:vendor/firmware/rampatch_tlv.img
+etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
+
+# Fingerprint - from rosy
+vendor/lib/mmi_fingerprint.so
+vendor/lib64/mmi_fingerprint.so
+lib/libkeymaster1.so:vendor/lib/libkeymaster1.so
+lib64/libkeymaster1.so:vendor/lib64/libkeymaster1.so
