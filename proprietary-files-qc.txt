@@ -418,7 +418,7 @@ vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/libwvhidl.so
 
 # QTI - from vince
--framework/qti-telephony-common.jar
+framework/qti-telephony-common.jar
 
 # Consumer IR - from vince
 vendor/lib64/hw/consumerir.default.so
@@ -486,8 +486,8 @@ vendor/lib64/libsmemlog.so
 -vendor/app/QtiTelephonyService/QtiTelephonyService.apk
 vendor/etc/permissions/qcrilhook.xml
 vendor/etc/permissions/telephonyservice.xml
--vendor/framework/QtiTelephonyServicelibrary.jar
--vendor/framework/qcrilhook.jar
+vendor/framework/QtiTelephonyServicelibrary.jar
+vendor/framework/qcrilhook.jar
 -vendor/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
