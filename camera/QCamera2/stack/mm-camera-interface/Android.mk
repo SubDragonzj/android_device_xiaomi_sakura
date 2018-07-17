@@ -40,8 +40,9 @@ LOCAL_COPY_HEADERS += ../common/cam_types.h
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/inc \
     $(LOCAL_PATH)/../common \
-    hardware/libhardware/include/hardware \
+    hardware/libhardware/include \
     system/media/camera/include \
+    system/core/libsystem/include
 
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
 LOCAL_C_INCLUDES+= $(kernel_includes)
