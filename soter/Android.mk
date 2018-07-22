@@ -27,6 +27,4 @@ LOCAL_SRC_FILES := \
 
 LOCAL_JAVA_LIBRARIES := bouncycastle
 
-LOCAL_VENDOR_MODULE := true
-
 include $(BUILD_JAVA_LIBRARY)
