@@ -184,7 +184,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.narrow.searchrange=1
 
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+    libshim_camera
 
 # Configstore
 PRODUCT_PACKAGES += \

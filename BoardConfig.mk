@@ -237,6 +237,10 @@ BOARD_SEPOLICY_DIRS += \
     $(LOCAL_PATH)/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/libmmcamera_ppeiscore.so|/vendor/lib/libshim_camera.so
+
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
