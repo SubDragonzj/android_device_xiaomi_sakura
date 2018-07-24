@@ -16,9 +16,6 @@ vendor/lib/libscvePanorama.so
 vendor/lib64/libscvePanorama.so
 vendor/lib/libscvePanorama_lite.so
 vendor/lib64/libscvePanorama_lite.so
-vendor/lib/lib_lowlight.so
-vendor/lib/libXMFD_AgeGender.so
-vendor/lib/libcaffe.so
 vendor/lib/libmpbase.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_gpio.so
