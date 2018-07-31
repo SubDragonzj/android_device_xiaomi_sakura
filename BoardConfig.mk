@@ -108,6 +108,7 @@ BOARD_HARDWARE_CLASS += \
     hardware/mokee/mkhw
 
 # HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(LOCAL_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
 
