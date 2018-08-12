@@ -179,6 +179,7 @@ framework/izat.xt.srv.jar
 lib64/liblocationservice_jni.so
 lib64/libxt_native.so
 lib64/vendor.qti.gnss@1.0.so
+lib/vendor.qti.gnss@1.0.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/loc_launcher
@@ -214,6 +215,7 @@ vendor/lib64/libulp2.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so
+vendor/lib/vendor.qti.gnss@1.0_vendor.so
 
 # Graphics - from sakura MIUI_V10.0.5.0
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
