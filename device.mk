@@ -507,7 +507,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk_package
+    vndk-sp
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
