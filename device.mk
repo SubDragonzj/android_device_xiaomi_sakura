@@ -241,7 +241,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_rosy
+    android.hardware.biometrics.fingerprint@2.0-service.xiaomi_rosy
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \

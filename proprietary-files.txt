@@ -1913,7 +1913,10 @@ etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
 etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
 
 # Fingerprint - from rosy
-vendor/lib/mmi_fingerprint.so
-vendor/lib64/mmi_fingerprint.so
 lib/libkeymaster1.so:vendor/lib/libkeymaster1.so
 lib64/libkeymaster1.so:vendor/lib64/libkeymaster1.so
+lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.default.so
+lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/gf_fingerprint.default.so
+lib64/libgoodixfingerprintd_binder.so:vendor/lib64/libgoodixfingerprintd_binder.so
+lib64/libgf_ca.so:vendor/lib64/libgf_ca.so 
+lib64/libgf_hal.so:vendor/lib64/libgf_hal.so
