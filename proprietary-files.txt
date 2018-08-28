@@ -9,6 +9,8 @@ etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Speaker_cal.ac
 etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera - from rosy
+bin/mm-qcamera-app:vendor/bin/mm-qcamera-app
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_gpio.so
 vendor/lib/libflash_pmic.so
@@ -1667,16 +1669,9 @@ vendor/lib/libchromatix_sony_imx486_ii_preview.so
 vendor/lib/libchromatix_sony_imx486_ii_snapshot.so
 vendor/lib/libchromatix_sony_imx486_ii_zsl_preview_dw9714v.so
 vendor/lib/libchromatix_sony_imx486_ii_zsl_video_dw9714v.so
-vendor/lib/libchromatix_ovt_ov12a10_i_cpp_snapshot_hht.so
-vendor/lib/libchromatix_ovt_ov12a10_i_india_cpp_snapshot_hht.so
-vendor/lib/libchromatix_ovt_ov5675_i_cpp_snapshot_hht.so
-vendor/lib/libchromatix_ovt_ov5675_ii_cpp_snapshot_hht.so
-vendor/lib/libchromatix_ovt_ov5675_ii_india_cpp_snapshot_hht.so
-vendor/lib/libchromatix_ovt_ov5675_i_india_cpp_snapshot_hht.so
-vendor/lib/libchromatix_sony_imx486_ii_cpp_snapshot_hht.so
-vendor/lib/libchromatix_sony_imx486_ii_india_cpp_snapshot_hht.so
 
 # Camera mmcamera - from rosy
+lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
