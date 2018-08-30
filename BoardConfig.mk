@@ -229,9 +229,6 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
-# Sensors
-USE_SENSOR_MULTI_HAL := true
-
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     $(LOCAL_PATH)/sepolicy
