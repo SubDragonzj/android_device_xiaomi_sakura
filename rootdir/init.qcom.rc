@@ -170,16 +170,6 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
-    # Goodix Fingerprint
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
-    on property:persist.sys.fp.vendor=fpc
-    setprop ro.boot.fpsensor fpc
-
-    on property:persist.sys.fp.vendor=goodix
-	setprop ro.boot.fpsensor goodix
-
     # Notification LEDs
     chown root system /sys/class/leds/red/blink
     chown root system /sys/class/leds/green/blink
@@ -202,10 +192,10 @@ on post-fs-data
     mkdir /data/vendor/camera 0770 camera camera
 
     #Create directories for Fingerprint
-    mkdir /data/misc/stargate 0770 system system
-    mkdir /data/misc/stargate/bg_estimation 0770 system system
-    mkdir /data/misc/stargate/calib_test 0770 system system
-    mkdir /data/misc/stargate/database 0770 system system
+    mkdir /data/vendor/misc/qti_fp 0770 system system
+    mkdir /data/vendor/misc/qti_fp/bg_estimation 0770 system system
+    mkdir /data/vendor/misc/qti_fp/calib_test 0770 system system
+    mkdir /data/vendor/misc/qti_fp/database 0770 system system
 
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
