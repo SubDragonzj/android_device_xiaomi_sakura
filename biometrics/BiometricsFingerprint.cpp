@@ -220,9 +220,9 @@ fingerprint_device_t* getDeviceForVendor(const char *class_name)
     int err;
 
     if (!strcmp(class_name, "fpc")) {
-        err = load("/system/vendor/lib64/hw/fingerprint.fpc.so", &hw_module);
+        err = load("/vendor/lib64/hw/fingerprint.fpc.so", &hw_module);
     } else if (!strcmp(class_name, "goodix")) {
-        err = load("/system/vendor/lib64/hw/fingerprint.goodix.so", &hw_module);
+        err = load("/vendor/lib64/hw/fingerprint.goodix.so", &hw_module);
     } else {
         ALOGE("No fingerprint module class specified.");
         err = 1;
