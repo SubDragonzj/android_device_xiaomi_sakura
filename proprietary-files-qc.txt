@@ -429,6 +429,14 @@ vendor/firmware/novatek_ts_fw.bin
 # TAS Smart PA Firmware - from vince
 vendor/firmware/tas2557_uCDSP.bin
 
+# Fingerprint - from vince
+lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.so
+lib64/libgoodixfingerprintd_binder.so:vendor/lib64/libgoodixfingerprintd_binder.so
+lib64/libgf_ca.so:vendor/lib64/libgf_ca.so
+lib64/libgf_algo.so:vendor/lib64/libgf_algo.so
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
+
 # QMI - from msm8953-common
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
