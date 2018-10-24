@@ -1,31 +1,28 @@
-type hal_fingerprint_rosy, domain, binder_in_vendor_violators;
-hal_server_domain(hal_fingerprint_rosy, hal_fingerprint)
- 
-type hal_fingerprint_rosy_exec, exec_type, vendor_file_type, file_type;
-binder_use(hal_fingerprint_rosy)
-init_daemon_domain(hal_fingerprint_rosy)
+r_dir_file(hal_fingerprint_default, firmware_file)
 
-allow hal_fingerprint_rosy fingerprint_device:chr_file { read write open ioctl };
-allow hal_fingerprint_rosy { tee_device uhid_device }:chr_file { read write open ioctl };
-allow hal_fingerprint_rosy fingerprint_data_file:file rw_file_perms;
-allow hal_fingerprint_rosy { fuse mnt_user_file storage_file }:dir search;
-allow hal_fingerprint_rosy { mnt_user_file storage_file }:lnk_file read;
-allow hal_fingerprint_rosy fingerprint_sysfs:{ dir file } rw_file_perms;
+allow hal_fingerprint_default init:unix_stream_socket connectto;
 
-allow hal_fingerprint_rosy hal_fingerprint_rosy:netlink_socket { create bind write read };
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
+allow hal_fingerprint_default fingerprintd_device:chr_file rw_file_perms;
 
-binder_call(hal_fingerprint_rosy, vndservicemanager)
+allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
+allow hal_fingerprint_default hal_perf_default:binder call;
 
-binder_use(hal_fingerprint_rosy)
+allow hal_fingerprint_default sysfs_fpc_dev:dir r_dir_perms;
+allow hal_fingerprint_default sysfs_fpc_dev:file rw_file_perms;
 
-r_dir_file(hal_fingerprint_rosy, firmware_file)
+allow hal_fingerprint_default fingerprint_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
 
-add_service(hal_fingerprint_rosy, goodixvnd_service)
-add_hwservice(hal_fingerprint_rosy, goodixhw_service)
+allow hal_fingerprint_default fingerprint_persist_file:file r_file_perms;
 
-allow hal_fingerprint_rosy vndbinder_device:chr_file ioctl;
+binder_call(hal_fingerprint_default, goodix_fingerprint_vndservice)
+allow hal_fingerprint_default goodix_fingerprint_vndservice:service_manager add;
 
-get_prop(hal_fingerprint_rosy, hal_fingerprint_prop)
-set_prop(hal_fingerprint_rosy, hal_fingerprint_prop)
+allow hal_fingerprint_default goodixfingerprintd_service:service_manager add;
 
-vndbinder_use(hal_fingerprint_rosy)
+allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+
+set_prop(hal_fingerprint_default, fingerprint_prop)
+
