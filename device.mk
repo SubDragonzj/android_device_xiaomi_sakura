@@ -210,30 +210,33 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.gralloc.enable_fb_ubwc=1 \
-    debug.enable.sglscale=1 \
-    debug.mdpcomp.logs=0 \
-    dev.pm.dyn_samplingrate=1 \
-    persist.demo.hdmirotationlock=false \
-    persist.hwc.enable_vds=1 \
-    persist.hwc.mdpcomp.enable=true
-
-# Display-qcom
-PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-service \
     copybit.msm8953 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
-    libtinyxml \
+    memtrack.msm8953 \
     libdisplayconfig \
+    liboverlay \
     libqdMetaData.system \
     libgenlock \
-    memtrack.msm8953
+    libtinyxml \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.0_vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.egl.hw=0 \
+    debug.enable.sglscale=1 \
+    debug.gralloc.enable_fb_ubwc=1 \
+    debug.mdpcomp.logs=0 \
+    debug.sf.hw=0 \
+    dev.pm.dyn_samplingrate=1 \
+    persist.debug.wfd.enable=1 \
+    persist.demo.hdmirotationlock=false \
+    persist.hwc.enable_vds=1 \
+    persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
+    ro.qualcomm.cabl=0 \
     ro.sf.lcd_density=320
 
 # DRM
@@ -553,3 +556,7 @@ PRODUCT_COPY_FILES += \
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=subdragonzj
+    
+# Time Services
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
