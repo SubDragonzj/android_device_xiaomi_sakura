@@ -19,7 +19,8 @@ $(call inherit-product, vendor/xiaomi/rosy/rosy-vendor.mk)
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library
+    com.dsi.ant.antradio_library \
+    libantradio
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -516,10 +517,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     thermal.msm8953
 
-# WLAN
-PRODUCT_PACKAGES += \
-    wcnss_service
-
 # Init scripts
 PRODUCT_PACKAGES += \
     init.qcom.usb.sh
@@ -529,28 +526,23 @@ PRODUCT_PACKAGES += \
     vndk-sp
 
 # Wi-Fi
-PRODUCT_PACKAGES += \
-    hostapd \
-    libcld80211 \
-    libwpa_client \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
-    libQWiFiSoftApCfg
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
-
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+    
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    libcld80211 \
+    libwpa_client \
+    hostapd \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
     
 # Maintainer

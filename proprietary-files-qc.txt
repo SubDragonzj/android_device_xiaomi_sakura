@@ -47,16 +47,6 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# ANT+ - from vince
-lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
-lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so
-
 # Bluetooth - from vince
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
@@ -416,6 +406,9 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/libwvhidl.so
+
+# Wi-Fi - from tissot
+vendor/bin/wcnss_service
 
 # QTI - from vince
 framework/qti-telephony-common.jar

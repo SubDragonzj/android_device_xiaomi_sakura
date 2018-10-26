@@ -17,7 +17,7 @@
 LOCAL_PATH := device/xiaomi/rosy
 
 # ANT
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
