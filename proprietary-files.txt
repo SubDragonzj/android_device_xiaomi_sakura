@@ -1877,6 +1877,12 @@ etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
 # Charger - from rosy
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
+# Consumer IR - from rosy
+lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so
+
+# USB - from rosy
+etc/firmware/ice40.bin:vendor/firmware/ice40.bin
+
 # Display calibration - from rosy
 -etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml
 -etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml

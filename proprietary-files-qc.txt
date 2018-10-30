@@ -1,4 +1,4 @@
-# ADSP - from vince
+# ADSP - from msm8953-common
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
@@ -11,7 +11,7 @@ vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 
-# ADSP modules - from vince
+# ADSP modules - from msm8953-common
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libexternal_dog_skel.so
@@ -22,7 +22,7 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# Audio - from vince
+# Audio - from msm8953-common
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -47,13 +47,13 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# Bluetooth - from vince
+# Bluetooth - from msm8953-common
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
-# CNE - from vince
+# CNE - from msm8953-common
 etc/cne/andsfCne.xml
 etc/cne/SwimConfig.xml
 etc/permissions/cneapiclient.xml
@@ -61,6 +61,8 @@ etc/permissions/com.quicinc.cne.xml
 framework/cneapiclient.jar
 framework/com.quicinc.cne.api-V1.0-java.jar
 framework/com.quicinc.cne.jar
+lib/vendor.qti.hardware.data.latency@1.0.so
+lib64/vendor.qti.hardware.data.latency@1.0.so
 -priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -87,34 +89,37 @@ vendor/lib/com.quicinc.cne.constants@1.0.so
 vendor/lib/com.quicinc.cne.constants@2.0.so
 vendor/lib/com.quicinc.cne.server@1.0.so
 vendor/lib/com.quicinc.cne.server@2.0.so
+vendor/lib/vendor.qti.hardware.data.latency@1.0_vendor.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
-vendor/lib/vendor.qti.hardware.data.latency@1.0_vendor.so
 vendor/lib64/com.quicinc.cne.api@1.0.so
 vendor/lib64/com.quicinc.cne.constants@1.0.so
 vendor/lib64/com.quicinc.cne.constants@2.0.so
 vendor/lib64/com.quicinc.cne.server@1.0.so
 vendor/lib64/com.quicinc.cne.server@2.0.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
-vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 
-# DPM - from vince
+# Charger - from msm8953-common
+vendor/bin/hvdcp_opti
+
+# DPM - from msm8953-common
 vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib64/libdpmqmihal.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib/libdpmqmihal.so
 
-# DRM - from vince
+# DRM - from msm8953-common
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/libGPreqcancel.so
@@ -130,19 +135,11 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# FM - from vince
--lib/vendor.qti.hardware.fm@1.0.so
--lib64/vendor.qti.hardware.fm@1.0.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
-
-# Gatekeeper - from vince
+# Gatekeeper - from msm8953-common
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 
-# GPS - from vince
+# GPS - from msm8953-common
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
@@ -187,7 +184,7 @@ vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so
 
-# Graphics - from vince
+# Graphics - from msm8953-common
 vendor/lib/libsdm-disp-apis.so
 vendor/lib64/libsdm-disp-apis.so
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -253,11 +250,14 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Keystore - from vince
+# Ipacm - from msm8953-common
+vendor/bin/ipacm-diag
+
+# Keystore - from msm8953-common
 vendor/lib/hw/keystore.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 
-# Listen - from vince
+# Listen - from msm8953-common
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
@@ -265,7 +265,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 
-# Media - from vince
+# Media - from msm8953-common
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libOmxAacDec.so
@@ -300,46 +300,38 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libvpplibrary.so
 
-# Modem - from vince
+# Modem - from msm8953-common
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
-# Perf - from vince
--lib/vendor.qti.hardware.iop@1.0.so
+# Perf - from msm8953-common
 lib/vendor.qti.hardware.perf@1.0.so
--lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/bin/msm_irqbalance
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
 vendor/etc/perf/perfboostsconfig.xml
-vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so
 vendor/lib/libfeedbackhandler.so
 vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
-vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
 vendor/lib64/libfeedbackhandler.so
 vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-iopd-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 
-# Peripheral manager - from vince
+# Peripheral manager - from msm8953-common
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from vince
+# Postprocessing - from msm8953-common
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 framework/com.qti.snapdragon.sdk.display.jar
 vendor/lib/libsd_sdk_display.so
@@ -364,73 +356,7 @@ vendor/lib64/vendor.display.color@1.0_vendor.so
 vendor/lib64/vendor.display.postproc@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
 
-# QTEE - from vince
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
-
-# Sensors - from vince
-vendor/bin/sensors.qcom
-vendor/lib/hw/activity_recognition.msm8953.so
-vendor/lib/libsensor1.so
-vendor/lib/libsensor_reg.so
-vendor/lib/libsensor_user_cal.so
-vendor/lib/sensors.ssc.so
-vendor/lib64/hw/activity_recognition.msm8953.so
-vendor/lib64/libsensor1.so
-vendor/lib64/libsensor_reg.so
-vendor/lib64/libsensor_user_cal.so
-vendor/lib64/sensors.ssc.so
-
-# Thermal - from vince
-vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
-
-# Time services - from vince
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
--vendor/lib64/libtime_genoff.so
-
-# TUI - from vince
-lib/vendor.qti.hardware.tui_comm@1.0.so
-lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
-
-# Widevine - from vince
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
-vendor/lib/libwvhidl.so
-
-# Wi-Fi - from tissot
-vendor/bin/wcnss_service
-
-# QTI - from vince
-framework/qti-telephony-common.jar
-
-# Consumer IR - from vince
-vendor/lib64/hw/consumerir.default.so
-
-# Novatek NT36672 Firmware - from vince
-vendor/firmware/novatek_ts_fw.bin
-
-# TAS Smart PA Firmware - from vince
-vendor/firmware/tas2557_uCDSP.bin
-
-# Fingerprint - from vince
-lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.so
-lib64/libgoodixfingerprintd_binder.so:vendor/lib64/libgoodixfingerprintd_binder.so
-lib64/libgf_ca.so:vendor/lib64/libgf_ca.so
-lib64/libgf_algo.so:vendor/lib64/libgf_algo.so
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
-
-# QMI - from msm8953-common
+# QMI - from tissot - OPR1.170623.026
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 lib/libdiag_system.so|f207e0075be87f67ecd7c0c629cb542212884e28
@@ -471,12 +397,13 @@ vendor/lib64/libqmi_encdec.so|d1529781c74bbffbe1167f86a033c7e38d474a5e
 vendor/lib64/libqmiservices.so|911cc82311f16570c8b511949493bf4a046b55c3
 vendor/lib64/libsmemlog.so|512653d3d9563fda55acb84d76006c298eb78ba2
 
-# Radio - from msm8953-common
+# Radio - from tissot - OPR1.170623.026
 -app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
 framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
+framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f313f243661c8e516ecc6a5785e8f0829daedb1c
 vendor/bin/ATFWD-daemon|9778a62bb94f9eeb49190908bb9b74060acd4fa6
 vendor/bin/netmgrd|748b87d905aa6727e812694de559e54b958f3832
@@ -520,28 +447,32 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so|d30462843
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so|e9bcbdf6544c5334a1f2e461d733d5766cd1b129
 vendor/radio/qcril_database/qcril.db|8405d20c8e1184c79eba1c4f19ecfb92d7529bdf
 
-# Radio - IMS - from msm8953-common
--app/ims/ims.apk
-etc/permissions/qti-vzw-ims-internal.xml
-lib/com.qualcomm.qti.imscmservice@1.0.so
-lib/lib-imscamera.so
-lib/lib-imsvideocodec.so
-lib/lib-imsvtextutils.so
-lib/lib-imsvtutils.so
-lib/libimscamera_jni.so
-lib/libimsmedia_jni.so
+# Radio - IMS - from tissot - OPR1.170623.026.V9.5.4.0.ODHMIFA
+-vendor/app/ims/ims.apk|24aee26c7409564400ce093520408242863630c6
+-vendor/app/imssettings/imssettings.apk
+-app/uceShimService/uceShimService.apk
+vendor/etc/permissions/qti-vzw-ims-internal.xml
+vendor/etc/permissions/com.qualcomm.qti.imscmservice.xml
+vendor/framework/com.qualcomm.qti.imscmservice@1.0-java.jar
+vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
+vendor/lib/lib-imscamera.so
+vendor/lib/lib-imsvideocodec.so
+vendor/lib/lib-imsvtextutils.so
+vendor/lib/lib-imsvtutils.so
+vendor/lib/libimscamera_jni.so
+vendor/lib/libimsmedia_jni.so
 lib/librcc.so
-lib/vendor.qti.imsrtpservice@1.0.so
-lib64/com.qualcomm.qti.imscmservice@1.0.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
+vendor/lib/vendor.qti.imsrtpservice@1.0.so
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
+vendor/lib64/lib-imscamera.so
+vendor/lib64/lib-imsvideocodec.so
+vendor/lib64/lib-imsvt.so
+vendor/lib64/lib-imsvtextutils.so
+vendor/lib64/lib-imsvtutils.so
+vendor/lib64/libimscamera_jni.so
+vendor/lib64/libimsmedia_jni.so
 lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -554,6 +485,9 @@ vendor/lib/lib-imsdpl.so
 vendor/lib/lib-imsqimf.so
 vendor/lib/lib-imsxml.so
 vendor/lib/lib-rtpcommon.so
+vendor/lib/lib-rtpcore.so
+vendor/lib/lib-rtpdaemoninterface.so
+vendor/lib/lib-rtpsl.so
 vendor/lib/lib-uceservice.so
 vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so
@@ -571,3 +505,52 @@ vendor/lib64/lib-rtpsl.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
+
+# Sensors - from msm8953-common
+vendor/bin/sensors.qcom
+vendor/lib/hw/activity_recognition.msm8953.so
+vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
+vendor/lib/libsensor_user_cal.so
+vendor/lib/sensors.ssc.so
+vendor/lib64/hw/activity_recognition.msm8953.so
+vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsensor_user_cal.so
+vendor/lib64/sensors.ssc.so
+
+# Thermal - from msm8953-common
+vendor/bin/thermal-engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
+
+# Time services - from msm8953-common
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+-vendor/lib/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
+
+# TUI - from msm8953-common
+lib/vendor.qti.hardware.tui_comm@1.0.so
+lib64/vendor.qti.hardware.tui_comm@1.0.so
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
+
+# Widevine - from msm8953-common
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
+vendor/lib/libwvhidl.so
+
+# Wi-Fi - from msm8953-common
+vendor/bin/wcnss_service
+
+# Fingerprint - from vince
+lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.so
+lib64/libgoodixfingerprintd_binder.so:vendor/lib64/libgoodixfingerprintd_binder.so
+lib64/libgf_ca.so:vendor/lib64/libgf_ca.so
+lib64/libgf_algo.so:vendor/lib64/libgf_algo.so
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
