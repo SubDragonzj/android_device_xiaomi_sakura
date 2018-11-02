@@ -73,4 +73,11 @@ patchelf --replace-needed android.hardware.gnss@1.0.so android.hardware.gnss@1.0
 CAMERA2_SENSOR_MODULES="$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
+# Store libaudcal.so in acdbdata at a new path
+sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
+$BLOB_ROOT/vendor/lib/libaudcal.so
+
+sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
+$BLOB_ROOT/vendor/lib64/libaudcal.so
+
 #"$MY_DIR"/setup-makefiles.sh
