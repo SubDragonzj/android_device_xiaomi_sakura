@@ -243,3 +243,6 @@ PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
 
 # Inherit the proprietary files
 include vendor/xiaomi/rosy/BoardConfigVendor.mk
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-01-01
