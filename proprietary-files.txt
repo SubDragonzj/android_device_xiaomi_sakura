@@ -1,4 +1,4 @@
-# Audio ACDB - from rosy
+# Audio ACDB - from rosy MIUI_V9.2.3.0
 etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 etc/acdbdata/QRD/QRD_General_cal.acdb:vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
 etc/acdbdata/QRD/QRD_Global_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
@@ -8,7 +8,7 @@ etc/acdbdata/QRD/QRD_Headset_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Headset_cal.ac
 etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Camera - from rosy
+# Camera - from rosy MIUI_V9.2.3.0
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 vendor/lib/libllvd_smore.so
 vendor/lib/libChamomilePA.so
@@ -47,7 +47,7 @@ vendor/lib/libubifocus.so
 vendor/lib/libmpbase.so
 vendor/lib/libremosaic_daemon.so
 
-# Camera actuators - from rosy
+# Camera actuators - from rosy MIUI_V9.2.3.0
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ak7345.so
@@ -70,7 +70,7 @@ vendor/lib/libactuator_ovt_ov12a10_i_dw9763.so
 vendor/lib/libactuator_pseudo.so
 vendor/lib/libactuator_rohm_bu64243gwz.so
 
-# Camera XML Configs - from rosy
+# Camera XML Configs - from rosy MIUI_V9.2.3.0
 etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
 etc/camera/csidtg_camera.xml:vendor/etc/camera/csidtg_camera.xml
 etc/camera/csidtg_chromatix.xml:vendor/etc/camera/csidtg_chromatix.xml
@@ -136,7 +136,7 @@ etc/camera/sony_imx486_ii_chromatix.xml:vendor/etc/camera/sony_imx486_ii_chromat
 etc/camera/imx230_qc2002_chromatix.xml:vendor/etc/camera/imx230_qc2002_chromatix.xml
 etc/camera/ov5695_chromatix.xml:vendor/etc/camera/ov5695_chromatix.xml
 
-# Camera chromatix - from rosy
+# Camera chromatix - from rosy MIUI_V9.2.3.0
 vendor/lib/libchromatix_csidtg_common.so
 vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
@@ -1681,7 +1681,7 @@ vendor/lib/libchromatix_sony_imx486_ii_snapshot.so
 vendor/lib/libchromatix_sony_imx486_ii_zsl_preview_dw9714v.so
 vendor/lib/libchromatix_sony_imx486_ii_zsl_video_dw9714v.so
 
-# Camera mmcamera - from rosy
+# Camera mmcamera - from rosy MIUI_V9.2.3.0
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_cac3_lib.so
@@ -1862,7 +1862,7 @@ vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
 
-# Camera firmware - from rosy
+# Camera firmware - from rosy MIUI_V9.2.3.0
 etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
@@ -1874,21 +1874,21 @@ etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
 etc/firmware/cpp_firmware_v1_10_0.fw:vendor/firmware/cpp_firmware_v1_10_0.fw
 etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
 
-# Charger - from rosy
+# Charger - from rosy MIUI_V9.2.3.0
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
-# Consumer IR - from rosy
+# Consumer IR - from rosy MIUI_V9.2.3.0
 lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so
 
-# USB - from rosy
+# USB - from rosy MIUI_V9.2.3.0
 etc/firmware/ice40.bin:vendor/firmware/ice40.bin
 
-# Display calibration - from rosy
+# Display calibration - from rosy MIUI_V9.2.3.0
 -etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8006m_boe_5p7_720p_video.xml
 -etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8613_csot_5p7_720p_video.xml
 -etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml:vendor/etc/qdcm_calib_data_ft8613_ebbg_5p7_720p_video.xml
 
-# Graphics firmware - from rosy
+# Graphics firmware - from rosy MIUI_V9.2.3.0
 etc/firmware/a225p5_pm4.fw:vendor/firmware/a225p5_pm4.fw
 etc/firmware/a225_pfp.fw:vendor/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw:vendor/firmware/a225_pm4.fw
@@ -1913,7 +1913,7 @@ etc/firmware/a530v3_gpmu.fw2:vendor/firmware/a530v3_gpmu.fw2
 etc/firmware/a530v3_seq.fw2:vendor/firmware/a530v3_seq.fw2
 etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2
 
-# Bluetooth firmware - from rosy
+# Bluetooth firmware - from rosy MIUI_V9.2.3.0
 etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
 etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
 etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
@@ -1924,6 +1924,13 @@ etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
 etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
 etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
 
-# Fingerprint - from rosy
-lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.so
+# Fingerprint - from rosy MIUI_8.11.8
+vendor/lib64/hw/fpcfingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.so
+lib64/hw/goodixfingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.so
+lib64/libgf_ca.so:vendor/lib64/libgf_ca.so
+lib64/libgoodixfingerprintd_binder.so:vendor/lib64/libgoodixfingerprintd_binder.so
+lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so:vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
+lib64/libvendor.goodix.hardware.fingerprint@1.0.so:vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
+
+# fingerprint interface hal -from rosy MIUI_V9.2.3.0
 lib64/libgf_hal.so:vendor/lib64/libgf_hal.so
