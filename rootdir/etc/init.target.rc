@@ -279,6 +279,9 @@ service ppd /system/vendor/bin/mm-pp-dpps
     socket pps stream 0660 system system
     group system graphics
 
+on property:vendor.post_boot.parsed=*
+    setprop sys.post_boot.parsed ${vendor.post_boot.parsed}
+
 on property:init.svc.surfaceflinger=stopped
     stop ppd
 
