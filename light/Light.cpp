@@ -16,7 +16,7 @@
 
 //Author := dev_harsh1998, Isaac Chen
 
-#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_rosy"
+#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_sakura"
 
 #include <log/log.h>
 #include <fstream>
@@ -53,7 +53,7 @@ static void set(std::string path, int value) {
     set(path, std::to_string(value));
 }
 
-static void handleRosyBacklight(const LightState& state) {
+static void handleSakuraBacklight(const LightState& state) {
     /*
      * Since Xiaomi implemented 4095 level brightness in panel dtsi
      * while caf only have 255 level, we multiply 16 to brightness by default.
@@ -63,7 +63,7 @@ static void handleRosyBacklight(const LightState& state) {
     set(LCD_LED BRIGHTNESS, brightness);
 }
 
-static void handleRosyNotification(const LightState& state) {
+static void handleSakuraNotification(const LightState& state) {
     uint32_t redBrightness, brightness, blink;
 
     /*
@@ -103,10 +103,10 @@ static void handleRosyNotification(const LightState& state) {
 }
 
 static std::map<Type, std::function<void(const LightState&)>> lights = {
-    {Type::BACKLIGHT, handleRosyBacklight},
-    {Type::NOTIFICATIONS, handleRosyNotification},
-    {Type::BATTERY, handleRosyNotification},
-    {Type::ATTENTION, handleRosyNotification},
+    {Type::BACKLIGHT, handleSakuraBacklight},
+    {Type::NOTIFICATIONS, handleSakuraNotification},
+    {Type::BATTERY, handleSakuraNotification},
+    {Type::ATTENTION, handleSakuraNotification},
 };
 
 Light::Light() {}
