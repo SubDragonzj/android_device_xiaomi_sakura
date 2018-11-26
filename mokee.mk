@@ -24,22 +24,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit some common MoKee stuff
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
-# Inherit from rosy device
+# Inherit from sakura device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := mk_rosy
-PRODUCT_DEVICE := rosy
+PRODUCT_NAME := mk_sakura
+PRODUCT_DEVICE := sakura
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := rosy
+TARGET_VENDOR_PRODUCT_NAME := sakura
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="rosy-user 7.1.2 N2G47H V9.2.3.0.NDACNEK release-keys"
+    PRIVATE_BUILD_DESC="sakura-user 7.1.2 N2G47H V9.2.3.0.NDACNEK release-keys"
     
-BUILD_FINGERPRINT= "Xiaomi/rosy/rosy:7.1.2/N2G47H/V9.2.3.0.NDACNEK:user/release-keys"
+BUILD_FINGERPRINT= "Xiaomi/sakura/sakura:7.1.2/N2G47H/V9.2.3.0.NDACNEK:user/release-keys"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model

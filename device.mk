@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/rosy/rosy-vendor.mk)
+$(call inherit-product, vendor/xiaomi/sakura/sakura-vendor.mk)
 
 # ANT
 PRODUCT_PACKAGES += \
@@ -250,7 +250,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_rosy
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sakura
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
@@ -278,7 +278,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_rosy
+    android.hardware.light@2.0-service.xiaomi_sakura
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
@@ -327,7 +327,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    init.rosy.rc \
+    init.sakura.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \

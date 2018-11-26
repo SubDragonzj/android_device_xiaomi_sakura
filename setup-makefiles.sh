@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=rosy
+DEVICE=sakura
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2017

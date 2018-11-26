@@ -21,9 +21,9 @@ include $(CLEAR_VARS)
 LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
-LOCAL_MODULE := libinit_rosy
+LOCAL_MODULE := libinit_sakura
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := init_rosy.cpp
+LOCAL_SRC_FILES := init_sakura.cpp
 LOCAL_STATIC_LIBRARIES := \
     libbase \
     libselinux

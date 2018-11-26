@@ -14,20 +14,20 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/rosy
+LOCAL_PATH := device/xiaomi/sakura
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := rosy
+TARGET_OTA_ASSERT_DEVICE := sakura
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_rosy
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_sakura
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 PRODUCT_PACKAGES += \
-    librecovery_updater_rosy
+    librecovery_updater_sakura
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -118,8 +118,8 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_CONFIG := mokee_rosy_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/rosy
+TARGET_KERNEL_CONFIG := mokee_sakura_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sakura
 TARGET_USE_SDCLANG := true
 
 # Malloc
@@ -204,9 +204,9 @@ TARGET_USES_HWC2 := true
 TARGET_USES_OVERLAY := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_rosy
+TARGET_INIT_VENDOR_LIB := libinit_sakura
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_rosy
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sakura
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -238,7 +238,7 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
 
 # Inherit the proprietary files
-include vendor/xiaomi/rosy/BoardConfigVendor.mk
+include vendor/xiaomi/sakura/BoardConfigVendor.mk
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-01-01

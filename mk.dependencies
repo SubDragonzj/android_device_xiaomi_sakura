@@ -1,11 +1,11 @@
 [
   {
-    "repository": "android_vendor_xiaomi_rosy",
-    "target_path": "vendor/xiaomi/rosy"
+    "repository": "android_vendor_xiaomi_sakura",
+    "target_path": "vendor/xiaomi/sakura"
   },
   {
-    "repository": "android_kernel_xiaomi_rosy",
-    "target_path": "kernel/xiaomi/rosy"
+    "repository": "android_kernel_xiaomi_sakura",
+    "target_path": "kernel/xiaomi/sakura"
   },
   {
     "repository": "android_device_qcom_common",
