@@ -1,4 +1,4 @@
-# ADSP - from msm8953-common
+# ADSP - from sakura MIUI_V10.0.5.0
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
@@ -11,7 +11,7 @@ vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 
-# ADSP modules - from msm8953-common
+# ADSP modules - from sakura MIUI_V10.0.5.0
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libexternal_dog_skel.so
@@ -22,7 +22,7 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# Audio - from msm8953-common
+# Audio - from sakura MIUI_V10.0.5.0
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -47,13 +47,13 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# Bluetooth - from msm8953-common
+# Bluetooth - from sakura MIUI_V10.0.5.0
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
-# CNE - from msm8953-common
+# CNE - from sakura MIUI_V10.0.5.0
 etc/cne/andsfCne.xml
 etc/cne/SwimConfig.xml
 etc/permissions/cneapiclient.xml
@@ -109,17 +109,17 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
-# Charger - from msm8953-common
+# Charger - from sakura MIUI_V10.0.5.0
 vendor/bin/hvdcp_opti
 
-# DPM - from msm8953-common
+# DPM - from sakura MIUI_V10.0.5.0
 vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib64/libdpmqmihal.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib/libdpmqmihal.so
 
-# DRM - from msm8953-common
+# DRM - from sakura MIUI_V10.0.5.0
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/libGPreqcancel.so
@@ -135,11 +135,11 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# Gatekeeper - from msm8953-common
+# Gatekeeper - from sakura MIUI_V10.0.5.0
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 
-# GPS - from msm8953-common
+# GPS - from sakura MIUI_V10.0.5.0
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
@@ -184,9 +184,9 @@ vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so
 
-# Graphics - from msm8953-common
-vendor/lib/libsdm-disp-apis.so
-vendor/lib64/libsdm-disp-apis.so
+# Graphics - from sakura MIUI_V10.0.5.0
+lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
+lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -250,14 +250,14 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Ipacm - from msm8953-common
+# Ipacm - from sakura MIUI_V10.0.5.0
 vendor/bin/ipacm-diag
 
-# Keystore - from msm8953-common
+# Keystore - from sakura MIUI_V10.0.5.0
 vendor/lib/hw/keystore.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 
-# Listen - from msm8953-common
+# Listen - from sakura MIUI_V10.0.5.0
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
@@ -265,7 +265,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 
-# Media - from msm8953-common
+# Media - from sakura MIUI_V10.0.5.0
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libOmxAacDec.so
@@ -300,11 +300,11 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libvpplibrary.so
 
-# Modem - from msm8953-common
+# Modem - from sakura MIUI_V10.0.5.0
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
-# Perf - from msm8953-common
+# Perf - from sakura MIUI_V10.0.5.0
 lib/vendor.qti.hardware.perf@1.0.so
 lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
@@ -325,20 +325,20 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 
-# Peripheral manager - from msm8953-common
+# Peripheral manager - from sakura MIUI_V10.0.5.0
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from msm8953-common
+# Postprocessing - from sakura MIUI_V10.0.5.0
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 framework/com.qti.snapdragon.sdk.display.jar
-vendor/lib/libsd_sdk_display.so
+lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so
 -lib/vendor.display.color@1.0.so
 lib/vendor.display.postproc@1.0.so
 lib/vendor.qti.hardware.qdutils_disp@1.0.so
-vendor/lib64/libsd_sdk_display.so
+lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so
 -lib64/vendor.display.color@1.0.so
 lib64/vendor.display.postproc@1.0.so
 lib64/vendor.qti.hardware.qdutils_disp@1.0.so
@@ -355,6 +355,48 @@ vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0_vendor.so
 vendor/lib64/vendor.display.postproc@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+
+# Sensors - from sakura MIUI_V10.0.5.0
+vendor/bin/sensors.qcom
+vendor/lib/hw/activity_recognition.msm8953.so
+vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
+vendor/lib/libsensor_user_cal.so
+vendor/lib/sensors.ssc.so
+vendor/lib64/hw/activity_recognition.msm8953.so
+vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsensor_user_cal.so
+vendor/lib64/sensors.ssc.so
+
+# Thermal - from sakura MIUI_V10.0.5.0
+vendor/bin/thermal-engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
+
+# Time services - from sakura MIUI_V10.0.5.0
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+-vendor/lib/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
+
+# TUI - from sakura MIUI_V10.0.5.0
+lib/vendor.qti.hardware.tui_comm@1.0.so
+lib64/vendor.qti.hardware.tui_comm@1.0.so
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
+
+# Widevine - from sakura MIUI_V10.0.5.0
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
+vendor/lib/libwvhidl.so
+
+# Wi-Fi - from sakura MIUI_V10.0.5.0
+vendor/bin/wcnss_service
+
 
 # QMI - from tissot - OPR1.170623.026
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
@@ -505,45 +547,3 @@ vendor/lib64/lib-rtpsl.so
 vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
-
-# Sensors - from msm8953-common
-vendor/bin/sensors.qcom
-vendor/lib/hw/activity_recognition.msm8953.so
-vendor/lib/libsensor1.so
-vendor/lib/libsensor_reg.so
-vendor/lib/libsensor_user_cal.so
-vendor/lib/sensors.ssc.so
-vendor/lib64/hw/activity_recognition.msm8953.so
-vendor/lib64/libsensor1.so
-vendor/lib64/libsensor_reg.so
-vendor/lib64/libsensor_user_cal.so
-vendor/lib64/sensors.ssc.so
-
-# Thermal - from msm8953-common
-vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
-
-# Time services - from msm8953-common
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
--vendor/lib/libtime_genoff.so
--vendor/lib64/libtime_genoff.so
-
-# TUI - from msm8953-common
-lib/vendor.qti.hardware.tui_comm@1.0.so
-lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
-
-# Widevine - from msm8953-common
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
-vendor/lib/libwvhidl.so
-
-# Wi-Fi - from msm8953-common
-vendor/bin/wcnss_service
-
