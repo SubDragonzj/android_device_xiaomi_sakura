@@ -184,7 +184,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.isp.clock.optmz=0 \
     persist.camera.stats.test=5 \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
-    vidc.enc.dcvs.extra-buff-count=2
+    vidc.enc.dcvs.extra-buff-count=2 \
+    persist.camera.HAL3.enabled=1 \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.mokee.snap
 
 PRODUCT_PACKAGES += \
     Snap
@@ -220,7 +222,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0_vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
-PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
     debug.enable.sglscale=1 \
     debug.gralloc.enable_fb_ubwc=1 \
@@ -233,7 +234,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=0 \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=432
 
 # DRM
 PRODUCT_PACKAGES += \
