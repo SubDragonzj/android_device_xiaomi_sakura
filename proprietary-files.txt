@@ -42,6 +42,30 @@ vendor/lib/libubifocus.so
 vendor/lib64/libubifocus.so
 vendor/lib/libmpbase.so
 vendor/lib/libremosaic_daemon.so
+vendor/lib/libvidhance.so
+vendor/lib/libvidhance_gyro.so
+
+vendor/bin/mm-qcamera-app
+vendor/lib/hw/camera.msm8953.so
+vendor/lib/libmm-qcamera.so
+lib/libmorpho_memory_allocator.so:vendor/lib/libmorpho_memory_allocator.so
+lib64/libmorpho_memory_allocator.so:vendor/lib64/libmorpho_memory_allocator.so
+lib/libmorpho_panorama.so:vendor/lib/libmorpho_panorama.so
+lib64/libmorpho_panorama.so:vendor/lib64/libmorpho_panorama.so
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_dualcam_refocus.so
+vendor/lib/libarcsoft_high_dynamic_range.so
+lib/libmorpho_panorama_gp.so:vendor/lib/libmorpho_panorama_gp.so
+lib64/libmorpho_panorama_gp.so:vendor/lib64/libmorpho_panorama_gp.so
+vendor/lib/libFaceGrade.so
+vendor/lib/libmmjpeg_interface.so
+vendor/lib/libqomx_core.so
+vendor/lib/lib_lowlight.so
+vendor/lib/libXMFD_AgeGender.so
+lib/libdualcameraddm.so:vendor/lib/libdualcameraddm.so
+lib64/libdualcameraddm.so:vendor/lib64/libdualcameraddm.so
+lib/libjni_dualcamera.so:vendor/lib/libjni_dualcamera.so
+lib64/libjni_dualcamera.so:vendor/lib64/libjni_dualcamera.so
 
 # Camera actuators - from sakura MIUI_V10.0.5.0
 vendor/lib/libactuator_ad5816g.so
@@ -2048,6 +2072,12 @@ vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a540_gpmu.fw2
 vendor/firmware/leia_pfp_470.fw
 vendor/firmware/leia_pm4_470.fw
+
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.elf
+vendor/firmware/a506_zap.mdt
 
 # Fingerprint - from sakura MIUI_V10.0.5.0
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.so

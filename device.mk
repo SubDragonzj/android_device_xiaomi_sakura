@@ -168,10 +168,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8953 \
-    libmm-qcamera
-
-PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
@@ -191,8 +187,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.dcvs.extra-buff-count=2
 
 PRODUCT_PACKAGES += \
-    Snap \
-    libshim_camera
+    Snap
 
 # Configstore
 PRODUCT_PACKAGES += \
