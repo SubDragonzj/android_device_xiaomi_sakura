@@ -168,25 +168,19 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera.display.lmax=1280x720 \
-    camera.display.umax=1920x1080 \
-    camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
-    camera.lowpower.record.enable=1 \
     media.camera.ts.monotonic=1 \
-    persist.camera.gyro.disable=0 \
-    persist.camera.isp.clock.optmz=0 \
-    persist.camera.stats.test=5 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    vidc.enc.dcvs.extra-buff-count=2 \
     persist.camera.HAL3.enabled=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.mokee.snap
+    persist.camera.gyro.android=1 \
+    persist.camera.is_type=1 \
+    vendor.vidc.enc.dcvs.extra-buff-count=2 \
+    vendor.vidc.enc.disable.pq=true \
+    camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 PRODUCT_PACKAGES += \
     Snap
@@ -243,10 +237,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sakura
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
