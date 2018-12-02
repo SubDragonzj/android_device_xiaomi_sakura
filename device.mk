@@ -97,39 +97,41 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
-    android.hardware.soundtrigger@2.0-impl
+    android.hardware.audio.effect@2.0-service \
+    android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.0-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.voice.playback.conc.disabled=true \
-    vendor.voice.record.conc.disabled=false \
-    vendor.voice.voip.conc.disabled=true \
-    vendor.voice.conc.fallbackpath=deep-buffer \
-    vendor.audio.parser.ip.buffer.size=0 \
-    vendor.audio_hal.period_size=192 \
-    ro.vendor.audio.sdk.ssr=false \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.audio.fluence.speaker=true \
-    persist.vendor.bt.enable.splita2dp=false \
+    af.fast_track_multiplier=2 \
+    audio.deep_buffer.media=true \
     audio.offload.disable=true \
-    vendor.audio.tunnel.encode=false \
-    vendor.audio.offload.buffer.size.kb=64 \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=true \
+    persist.vendor.bt.enable.splita2dp=false \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.vendor.audio.sdk.ssr=false \
+    vendor.audio.flac.sw.decoder.24bit=true \
+    vendor.audio.offload.buffer.size.kb=64 \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.offload.multiaac.enable=true \
+    vendor.audio.offload.multiple.enabled=false \
     vendor.audio.offload.track.enable=true \
-    audio.deep_buffer.media=true \
+    vendor.audio.parser.ip.buffer.size=0 \
     vendor.audio.playback.mch.downsample=true \
-    vendor.voice.path.for.pcm.voip=true \
+    vendor.audio.pp.asphere.enabled=false \
+    vendor.audio.safx.pbe.enabled=true \
+    vendor.audio.tunnel.encode=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.safx.pbe.enabled=true \
-    vendor.audio.pp.asphere.enabled=false \
-    af.fast_track_multiplier=2 \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.flac.sw.decoder.24bit=true
+    vendor.audio_hal.period_size=192 \
+    vendor.voice.conc.fallbackpath=deep-buffer \
+    vendor.voice.path.for.pcm.voip=true \
+    vendor.voice.playback.conc.disabled=true \
+    vendor.voice.record.conc.disabled=false \
+    vendor.voice.voip.conc.disabled=true
 
 # Audio-qcom
 PRODUCT_PACKAGES += \
