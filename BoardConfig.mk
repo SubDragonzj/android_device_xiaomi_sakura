@@ -63,7 +63,7 @@ TARGET_USES_NEW_ION_API := true
 USE_OPENGL_RENDERER := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
+TARGET_TAP_TO_WAKE_NODE := "/proc/tp_wakeup_gesture"
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
