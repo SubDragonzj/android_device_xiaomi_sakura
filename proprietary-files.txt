@@ -1665,15 +1665,6 @@ vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 
-# Charger - from sakura MIUI_V10.0.5.0
-vendor/bin/hvdcp_opti
-
-# Consumer IR - from sakura MIUI_V10.0.5.0
-vendor/lib64/hw/consumerir.default.so
-
-# USB - from sakura MIUI_V10.0.5.0
-etc/firmware/ice40.bin:vendor/firmware/ice40.bin
-
 # Display calibration - from sakura MIUI_V10.0.5.0
 -vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml
