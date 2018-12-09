@@ -525,6 +525,7 @@ vendor/radio/qcril_database/qcril.db
 
 # Radio - IMS - from sakura MIUI_V10.0.5.0
 -app/ims/ims.apk
+-app/imssettings/imssettings.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/qti-vzw-ims-internal.xml
 lib/com.qualcomm.qti.imscmservice@1.0.so
