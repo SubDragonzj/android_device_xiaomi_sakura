@@ -65,9 +65,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
-    libbt-vendor
+    android.hardware.bluetooth@1.0-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd \
