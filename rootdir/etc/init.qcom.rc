@@ -65,19 +65,6 @@ on early-boot
     chown root audio /sys/kernel/boot_adsp/boot
 
 on boot
-    start baseband-sh
-
-service baseband-sh /vendor/bin/sh /vendor/etc/set_baseband.sh
-    class late_start
-    user root
-    oneshot
-    disabled
-
-service goodix_script /vendor/bin/init.goodix.sh
-    class late_start
-    user system
-    oneshot
-
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
