@@ -310,17 +310,21 @@ PRODUCT_PACKAGES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.sh \
+    init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    init.sakura.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.goodix.sh \
+    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    set_baseband.sh \
-    init.goodix.sh
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    set_baseband.sh
 
 # IPA Manager
 PRODUCT_PACKAGES += \
