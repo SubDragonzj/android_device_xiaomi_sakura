@@ -547,3 +547,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
+    
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.mk.maintainer=subdragonzj
