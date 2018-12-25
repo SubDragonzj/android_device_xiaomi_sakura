@@ -467,7 +467,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.default_network=22 \
     ro.use_data_netmgrd=true \
-    service.qti.ims.enabled=1
+    vendor.service.qti.ims.enabled=1 \
+    telephony.lteOnCdmaDevice=1 \
+    persist.vendor.ims.dropset_feature=0
 
 # RIL Wrapper
 PRODUCT_PACKAGES += \
