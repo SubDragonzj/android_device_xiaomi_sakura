@@ -327,12 +327,6 @@ service adsprpcd /system/vendor/bin/adsprpcd
     user media
     group media
 
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
-
 service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
    class main
    user root
@@ -357,12 +351,6 @@ on property:init.svc.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop per_proxy
-
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
 
 service mdtpd /system/vendor/bin/mdtpd
     class late_start
