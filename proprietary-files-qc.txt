@@ -144,6 +144,9 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
+# Fm
+vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
+
 # Gatekeeper - from sakura MIUI_V10.0.5.0
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
