@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mokee_rosy.mk
+    $(LOCAL_DIR)/mk_sakura.mk
