@@ -489,13 +489,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libril-wrapper
 
-# SOTER
-PRODUCT_PACKAGES += \
-    soter
-
-PRODUCT_BOOT_JARS += \
-    soter
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
