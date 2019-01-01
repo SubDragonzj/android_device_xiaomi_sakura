@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 The Android Open Source Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_sakura"
+#define LOG_TAG "android.hardware.light@2.0-service.sakura"
 
 #include <hidl/HidlTransportSupport.h>
 
@@ -31,7 +31,7 @@ using android::sp;
 using android::status_t;
 
 int main() {
-    android::sp<ILight> service = new Light();
+    sp<ILight> service = new Light();
 
     configureRpcThreadpool(1, true);
 

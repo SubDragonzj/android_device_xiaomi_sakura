@@ -171,7 +171,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sakura
+    android.hardware.light@2.0-service.sakura
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
