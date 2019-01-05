@@ -207,9 +207,7 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData.system \
     libgenlock \
-    libtinyxml \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.0_vendor
+    libtinyxml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
