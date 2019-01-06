@@ -1699,14 +1699,12 @@ vendor/firmware/a506_zap.elf
 vendor/firmware/a506_zap.mdt
 
 # Fingerprint - from sakura MIUI_V10.0.5.0
-vendor/lib64/hw/fingerprint.default.so
-vendor/lib64/hw/gf_fingerprint.default.so
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.so
+vendor/lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgoodixfingerprintd_binder.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/lib64/com.fingerprints.extension@1.0.so
 
