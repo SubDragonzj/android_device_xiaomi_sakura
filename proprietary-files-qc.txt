@@ -1,4 +1,4 @@
-# ADSP - from sakura MIUI_V10.0.5.0
+# ADSP - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
@@ -11,10 +11,9 @@ vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 
-# ADSP modules - from sakura MIUI_V10.0.5.0
+# ADSP modules - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
@@ -28,13 +27,13 @@ lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
 lib64/com.qualcomm.qti.ant@1.0.so|199481b290856fb63f5c5bf6def426b43309becb
 -lib64/libantradio.so|fb958cb68c99c71455f969afdf96225f5110f0df
 
-# ANT+ (vendor)
-vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+# ANT+ (vendor) - from sakura MIUI_V10.0.5.0
+vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so|e60fec88b356d636fe460793253160c62acd3193
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|2acec9b51c51571e23815724d86d12ee1325437f
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|d49d27f9a9003434ca673d0e02f2fb2b16316d4f
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|6f43a44b87b355aea5eda879be0acbdd044acb54
 
-# Audio - from sakura MIUI_V10.0.5.0
+# Audio - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -56,10 +55,9 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# Bluetooth - from sakura MIUI_V10.0.5.0
+# Bluetooth - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/wcnss_filter
 vendor/lib64/libbtnv.so
 vendor/lib64/libbt-hidlclient.so
@@ -67,11 +65,9 @@ vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# CNE - from sakura MIUI_V10.0.5.0
-etc/cne/andsfCne.xml
-etc/cne/SwimConfig.xml
+# CNE - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
 framework/cneapiclient.jar
@@ -79,7 +75,7 @@ framework/com.quicinc.cne.api-V1.0-java.jar
 framework/com.quicinc.cne.jar
 lib/vendor.qti.hardware.data.latency@1.0.so
 lib64/vendor.qti.hardware.data.latency@1.0.so
--priv-app/CNEService/CNEService.apk|4c6ee655fcdda500f4999ca9b3e1c028af2c8a71
+-priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -101,11 +97,20 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/lib/com.quicinc.cne.api@1.0.so
+vendor/lib/com.quicinc.cne.api@1.1.so
 vendor/lib/com.quicinc.cne.constants@1.0.so
 vendor/lib/com.quicinc.cne.constants@2.0.so
+vendor/lib/com.quicinc.cne.constants@2.1.so
 vendor/lib/com.quicinc.cne.server@1.0.so
 vendor/lib/com.quicinc.cne.server@2.0.so
-vendor/lib/vendor.qti.hardware.data.latency@1.0_vendor.so
+vendor/lib/com.quicinc.cne.server@2.1.so
+vendor/lib/com.quicinc.cne.server@2.2.so
+vendor/lib/vendor.qti.data.factory@1.0.so
+vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib/vendor.qti.latency@2.0.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
@@ -113,11 +118,20 @@ vendor/lib/libcneqmiutils.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
 vendor/lib64/com.quicinc.cne.api@1.0.so
+vendor/lib64/com.quicinc.cne.api@1.1.so
 vendor/lib64/com.quicinc.cne.constants@1.0.so
 vendor/lib64/com.quicinc.cne.constants@2.0.so
+vendor/lib64/com.quicinc.cne.constants@2.1.so
 vendor/lib64/com.quicinc.cne.server@1.0.so
 vendor/lib64/com.quicinc.cne.server@2.0.so
-vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
+vendor/lib64/com.quicinc.cne.server@2.1.so
+vendor/lib64/com.quicinc.cne.server@2.2.so
+vendor/lib64/vendor.qti.data.factory@1.0.so
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
@@ -125,17 +139,14 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
-# Charger - from sakura MIUI_V10.0.5.0
-vendor/bin/hvdcp_opti
-
-# DPM - from sakura MIUI_V10.0.5.0
+# DPM - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/dpmQmiMgr
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
-vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib/libdpmqmihal.so
 
-# DRM - from sakura MIUI_V10.0.5.0
+# DRM - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/libGPreqcancel.so
@@ -151,7 +162,7 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# Gatekeeper - from sakura MIUI_V10.0.5.0
+# Gatekeeper - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -163,10 +174,10 @@ vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/lib/hw/vendor.qti.hardware.factory@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.factory@1.0-impl.so
 vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
-lib/vendor.qti.hardware.factory@1.0.so:vendor/lib/vendor.qti.hardware.factory@1.0.so
-lib64/vendor.qti.hardware.factory@1.0.so:vendor/lib64/vendor.qti.hardware.factory@1.0.so
+vendor/lib/vendor.qti.hardware.factory@1.0.so
+vendor/lib64/vendor.qti.hardware.factory@1.0.so
 
-# Keymaster
+# Keymaster - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
@@ -217,7 +228,7 @@ vendor/lib64/libxtadapter.so|9a8fbd106994aaaf380be883fa2ef37d04e20401
 vendor/lib64/libxtwifi_ulp_adaptor.so|078124cc018badf89c1f5588e9102e9f7c034da2
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so|f7e9ee8e3804887a2f3939128e860767e6f27258
 
-# Graphics - from sakura MIUI_V10.0.5.0
+# Graphics - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
 lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -233,16 +244,12 @@ vendor/lib/libOpenCL.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
-vendor/lib/libc2d30-a5xx.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libgsl.so
 vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
-vendor/lib/libllvm-qgl.so
-vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-hdcpmgr.so
-vendor/lib/libmm-qdcm.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libscalar.so
@@ -264,16 +271,12 @@ vendor/lib64/libOpenCL.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
-vendor/lib64/libc2d30-a5xx.so
 vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libgsl.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
-vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libmm-qdcm.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscalar.so
@@ -283,14 +286,22 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Ipacm - from sakura MIUI_V10.0.5.0
+# Graphics firmware - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+
+# Ipacm - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/ipacm-diag
 
-# Keystore - from sakura MIUI_V10.0.5.0
+# Keystore - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/hw/keystore.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 
-# Listen - from sakura MIUI_V10.0.5.0
+# Listen - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
@@ -298,7 +309,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 
-# Media - from sakura MIUI_V10.0.5.0
+# Media - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libOmxAacDec.so
@@ -333,11 +344,11 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libvpplibrary.so
 
-# Modem - from sakura MIUI_V10.0.5.0
+# Modem - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
-# Perf - from sakura MIUI_V10.0.5.0
+# Perf - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 lib/vendor.qti.hardware.perf@1.0.so
 lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
@@ -348,33 +359,29 @@ vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
-vendor/lib/libfeedbackhandler.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
-vendor/lib64/libfeedbackhandler.so
+vendor/lib/vendor.qti.hardware.perf@1.0.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.perf@1.0.so
 
-# Peripheral manager - from sakura MIUI_V10.0.5.0
+# Peripheral manager - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from sakura MIUI_V10.0.5.0
+# Postprocessing - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 framework/com.qti.snapdragon.sdk.display.jar
-lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so
 -lib/vendor.display.color@1.0.so
 lib/vendor.display.postproc@1.0.so
 lib/vendor.qti.hardware.qdutils_disp@1.0.so
-lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so
 -lib64/vendor.display.color@1.0.so
 lib64/vendor.display.postproc@1.0.so
 lib64/vendor.qti.hardware.qdutils_disp@1.0.so
@@ -384,16 +391,25 @@ vendor/bin/mm-pp-dpps
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
 vendor/lib/libdisp-aba.so
-vendor/lib/vendor.display.color@1.0_vendor.so
-vendor/lib/vendor.display.postproc@1.0_vendor.so
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+vendor/lib/vendor.display.color@1.0.so
+vendor/lib/vendor.display.postproc@1.0.so
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0_vendor.so
-vendor/lib64/vendor.display.postproc@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.postproc@1.0.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Sensors - from sakura MIUI_V10.0.5.0
-vendor/bin/sensors.qcom
+# Power-off alarm - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+framework/vendor.qti.hardware.alarm-V1.0-java.jar
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/bin/power_off_alarm
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
+# Sensors - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+vendor/bin/sensors.qti
 vendor/lib/hw/activity_recognition.msm8953.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
@@ -405,42 +421,41 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal - from sakura MIUI_V10.0.5.0
+# Thermal - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
-vendor/lib64/libthermalfeature.so
 
-# Time services - from sakura MIUI_V10.0.5.0
+# Time services - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 -vendor/lib64/libtime_genoff.so
 
-# TUI - from sakura MIUI_V10.0.5.0
+# TUI - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 lib/vendor.qti.hardware.tui_comm@1.0.so
 lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# Widevine - from sakura MIUI_V10.0.5.0
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
-vendor/lib/libwvhidl.so
+# Widevine - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/lib64/libwvhidl.so
 
-# Wi-Fi - from sakura MIUI_V10.0.5.0
+# Wi-Fi - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/wcnss_service
 
-# Charger - from sakura MIUI_V10.0.5.0
+# Charger - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/hvdcp_opti
 
-# Consumer IR - from sakura MIUI_V10.0.5.0
+# Consumer IR - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib64/hw/consumerir.default.so
 
-# USB - from sakura MIUI_V10.0.5.0
+# USB - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 etc/firmware/ice40.bin:vendor/firmware/ice40.bin
 
 

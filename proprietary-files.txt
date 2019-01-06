@@ -1675,34 +1675,6 @@ vendor/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so
 -vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml
 
-# Graphics firmware - from sakura MIUI_V10.0.5.0
-vendor/firmware/a225p5_pm4.fw
-vendor/firmware/a225_pfp.fw
-vendor/firmware/a225_pm4.fw
-vendor/firmware/a300_pfp.fw
-vendor/firmware/a300_pm4.fw
-vendor/firmware/a330_pfp.fw
-vendor/firmware/a330_pm4.fw
-vendor/firmware/a420_pfp.fw
-vendor/firmware/a420_pm4.fw
-vendor/firmware/a530_gpmu.fw2
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
-vendor/firmware/a530v1_pfp.fw
-vendor/firmware/a530v1_pm4.fw
-vendor/firmware/a530v2_seq.fw2
-vendor/firmware/a530v3_gpmu.fw2
-vendor/firmware/a530v3_seq.fw2
-vendor/firmware/a540_gpmu.fw2
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
-
-vendor/firmware/a506_zap.b00
-vendor/firmware/a506_zap.b01
-vendor/firmware/a506_zap.b02
-vendor/firmware/a506_zap.elf
-vendor/firmware/a506_zap.mdt
-
 # Fingerprint - from sakura MIUI_V10.0.5.0
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.so
 vendor/lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.so
