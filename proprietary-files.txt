@@ -69,6 +69,8 @@ lib/libjni_dualcamera.so:vendor/lib/libjni_dualcamera.so
 lib64/libjni_dualcamera.so:vendor/lib64/libjni_dualcamera.so
 vendor/lib/libMiWatermark.so
 vendor/lib/libmibokeh_625.so
+lib/libskia.so:vendor/lib/libskia.so
+lib64/libskia.so:vendor/lib64/libskia.so
 
 # Camera actuators - from sakura MIUI_V10.0.5.0
 vendor/lib/libactuator_ad5816g.so
