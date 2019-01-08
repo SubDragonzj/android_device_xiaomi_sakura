@@ -9,7 +9,7 @@ vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Camera - from sakura MIUI_V10.0.5.0
+# Camera - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/mm-qcamera-daemon
 vendor/lib/libscvePanorama.so
 vendor/lib64/libscvePanorama.so
@@ -17,7 +17,6 @@ vendor/lib/libscvePanorama_lite.so
 vendor/lib64/libscvePanorama_lite.so
 lib/libmorpho_panorama_gp.so:vendor/lib/libmorpho_panorama_gp.so
 lib64/libmorpho_panorama_gp.so:vendor/lib64/libmorpho_panorama_gp.so
-vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
@@ -26,25 +25,12 @@ vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libois_lc898122.so
-vendor/lib/liboptizoom.so
-vendor/lib64/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
-vendor/lib/libseemore.so
-vendor/lib64/libseemore.so
--vendor/lib/libts_detected_face_hal.so
--vendor/lib/libts_face_beautify_hal.so
--vendor/lib64/libts_detected_face_hal.so
--vendor/lib64/libts_face_beautify_hal.so
-lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
-lib64/libtrueportrait.so:vendor/lib64/libtrueportrait.so
-vendor/lib/libubifocus.so
-vendor/lib64/libubifocus.so
 vendor/lib/libmpbase.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libvidhance.so
-vendor/lib/libvidhance_gyro.so
 
 vendor/bin/mm-qcamera-app
 vendor/lib/hw/camera.msm8953.so
@@ -63,16 +49,10 @@ vendor/lib/libmmjpeg_interface.so
 vendor/lib/libqomx_core.so
 vendor/lib/lib_lowlight.so
 vendor/lib/libXMFD_AgeGender.so
-lib/libdualcameraddm.so:vendor/lib/libdualcameraddm.so
-lib64/libdualcameraddm.so:vendor/lib64/libdualcameraddm.so
-lib/libjni_dualcamera.so:vendor/lib/libjni_dualcamera.so
-lib64/libjni_dualcamera.so:vendor/lib64/libjni_dualcamera.so
 vendor/lib/libMiWatermark.so
 vendor/lib/libmibokeh_625.so
-lib/libskia.so:vendor/lib/libskia.so
-lib64/libskia.so:vendor/lib64/libskia.so
 
-# Camera actuators - from sakura MIUI_V10.0.5.0
+# Camera actuators - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ak7345.so
@@ -92,7 +72,7 @@ vendor/lib/libactuator_rohm_bu64243gwz.so
 vendor/lib/libactuator_sakura_dw9714v_ofilm.so
 vendor/lib/libactuator_sakura_dw9714v_sunny.so
 
-# Camera XML Configs - from sakura MIUI_V10.0.5.0
+# Camera XML Configs - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
@@ -116,7 +96,7 @@ vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_factory.xml
 vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_india.xml
 vendor/etc/camera/sakura_s5k5e8_sunny_chromatix.xml
 
-# Camera chromatix - from sakura MIUI_V10.0.5.0
+# Camera chromatix - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/libchromatix_csidtg_common.so
 vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
@@ -1487,7 +1467,7 @@ vendor/lib/libchromatix_sakura_s5k5e8_sunny_snapshot.so
 vendor/lib/libchromatix_sakura_s5k5e8_sunny_zsl_preview_3a.so
 vendor/lib/libchromatix_sakura_s5k5e8_sunny_zsl_video_3a.so
 
-# Camera mmcamera - from sakura MIUI_V10.0.5.0
+# Camera mmcamera - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_dcrf.so
@@ -1505,8 +1485,6 @@ vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
-vendor/lib/libmmcamera_cac3_lib.so
-vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_csidtg.so
 vendor/lib/libmmcamera_dbg.so
 vendor/lib/libmmcamera_dcrf_lib.so
@@ -1568,11 +1546,9 @@ vendor/lib/libmmcamera_isp_template.so
 vendor/lib/libmmcamera_isp_wb40.so
 vendor/lib/libmmcamera_le2464c_eeprom.so
 vendor/lib/libmmcamera_le2464c_master_eeprom.so
-vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_onsemi_cat24c16_eeprom.so
 vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
 vendor/lib/libmmcamera_onsemi_cat24c32_imx362_eeprom.so
-vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ov13850_q13v06k.so
 vendor/lib/libmmcamera_ov13850.so
 vendor/lib/libmmcamera_ov2281.so
@@ -1619,7 +1595,6 @@ vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libmmcamera_sony_imx214_eeprom.so
 vendor/lib/libmmcamera_sony_imx298_eeprom.so
 vendor/lib/libmmcamera_sony_imx378_eeprom.so
-vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sunny_8865_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24c64a_imx362_eeprom.so
 vendor/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so
@@ -1630,22 +1605,19 @@ vendor/lib/libmmcamera_sw2d_lib.so
 vendor/lib/libmmcamera_thread_services.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_trueportrait_lib.so
 vendor/lib/libmmcamera_truly_cma481_eeprom.so
 vendor/lib/libmmcamera_truly_cmb433_eeprom.so
 vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib64/libmmcamera2_frame_algorithm.so
 vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
-vendor/lib64/libmmcamera_cac3_lib.so
 vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
-# Camera firmware - from sakura MIUI_V10.0.5.0
+# Camera firmware - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/firmware/cpp_firmware_v1_10_0.fw
 vendor/firmware/cpp_firmware_v1_1_1.fw
 vendor/firmware/cpp_firmware_v1_12_0.fw
@@ -1658,7 +1630,7 @@ vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
-# Camera HIDL - from sakura MIUI_V10.0.5.0 (HACK NEEDED)
+# Camera HIDL - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/hw/android.hardware.camera.provider@2.4-service
 vendor/lib/camera.device@1.0-impl.so
 vendor/lib/camera.device@3.2-impl.so
@@ -1669,8 +1641,8 @@ vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 
-vendor/lib/vendor.qti.hardware.camera.device@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so
+vendor/lib/vendor.qti.hardware.camera.device@1.0.so
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 
 # Display calibration - from sakura MIUI_V10.0.5.0
 -vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml
