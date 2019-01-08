@@ -437,7 +437,7 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/libwvhidl.so
 
-# Wi-Fi - from sakura MIUI_V10.0.5.0
+# Wi-Fi - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
 vendor/bin/wcnss_service
 
 # Charger - from sakura MIUI_V10.0.5.0
