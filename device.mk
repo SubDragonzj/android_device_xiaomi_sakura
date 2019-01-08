@@ -236,10 +236,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sakura
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti
