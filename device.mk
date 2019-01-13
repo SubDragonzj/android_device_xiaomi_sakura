@@ -513,10 +513,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     thermal.msm8953
 
-# Init scripts
+# Trust HAL
 PRODUCT_PACKAGES += \
-    init.qcom.usb.sh
-    
+    vendor.mokee.trust@1.0-service
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
