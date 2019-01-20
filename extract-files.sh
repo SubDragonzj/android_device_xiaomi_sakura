@@ -65,14 +65,11 @@ setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT" false $clean_vendor
 BLOB_ROOT="$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
 # Hax for camera configs
-CAMERA2_SENSOR_MODULES="$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
-sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
+patchelf --set-soname libicuuc-v27.so $BLOB_ROOT/vendor/lib/libicuuc-v27.so
+patchelf --set-soname libminikin-v27.so $BLOB_ROOT/vendor/lib/libminikin-v27.so
 
-# Store libaudcal.so in acdbdata at a new path
-sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
-$BLOB_ROOT/vendor/lib/libaudcal.so
-
-sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
-$BLOB_ROOT/vendor/lib64/libaudcal.so
+patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $BLOB_ROOT/vendor/lib/libvidhance_gyro.so
+patchelf --replace-needed libminikin.so libminikin-v27.so $BLOB_ROOT/vendor/lib/libMiWatermark.so
+patchelf --replace-needed libicuuc.so libicuuc-v27.so $BLOB_ROOT/vendor/lib/libMiWatermark.so
 
 #"$MY_DIR"/setup-makefiles.sh
