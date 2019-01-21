@@ -179,8 +179,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 PRODUCT_PACKAGES += \
-    Snap \
-    libshim_camera
+    Snap
 
 # Configstore
 PRODUCT_PACKAGES += \

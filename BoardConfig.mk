@@ -228,14 +228,6 @@ BOARD_SEPOLICY_DIRS += \
     $(LOCAL_PATH)/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libvidhance_gyro.so|/vendor/lib/libshim_camera.so
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/libshims
-
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
