@@ -19,5 +19,7 @@
 -->
 <resources>
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height">110px</dimen>
+    <item type="dimen" name="status_bar_height">@dimen/status_bar_height_portrait</item>
+    <item type="dimen" name="status_bar_height_landscape">@dimen/status_bar_height_portrait</item>
+    <dimen name="status_bar_height_portrait">93.0px</dimen>
 </resources>
