@@ -240,10 +240,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti
-
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
@@ -260,7 +256,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
-    vendor.mokee.livedisplay@1.0-service-qdcm
+    vendor.mokee.livedisplay@2.0-service-sdm
 
 # Netutils
 PRODUCT_PACKAGES += \
@@ -361,12 +357,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8953 \
     libcurl \
     libgnss \
     libgnsspps
+
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
