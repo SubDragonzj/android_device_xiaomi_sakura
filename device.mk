@@ -301,7 +301,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.sakura.rc
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -311,7 +312,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    set_baseband.sh
+    move_time_data.sh \
+    move_wifi_data.sh
 
 # IPA Manager
 PRODUCT_PACKAGES += \
