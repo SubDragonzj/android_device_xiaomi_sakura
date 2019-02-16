@@ -1,4 +1,4 @@
-# Audio ACDB - from sakura MIUI_V10.0.5.0
+# Audio ACDB - from sakura 9.1.26
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
@@ -9,7 +9,7 @@ vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Camera - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera - from sakura 9.1.26
 vendor/bin/mm-qcamera-daemon
 vendor/lib/libscvePanorama.so
 vendor/lib64/libscvePanorama.so
@@ -52,7 +52,7 @@ vendor/lib/libXMFD_AgeGender.so
 vendor/lib/libMiWatermark.so
 vendor/lib/libmibokeh_625.so
 
-# Camera actuators - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera actuators - from sakura 9.1.26
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ak7345.so
@@ -72,7 +72,7 @@ vendor/lib/libactuator_rohm_bu64243gwz.so
 vendor/lib/libactuator_sakura_dw9714v_ofilm.so
 vendor/lib/libactuator_sakura_dw9714v_sunny.so
 
-# Camera XML Configs - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera XML Configs - from sakura 9.1.26
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
@@ -96,7 +96,7 @@ vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_factory.xml
 vendor/etc/camera/sakura_s5k5e8_sunny_chromatix_india.xml
 vendor/etc/camera/sakura_s5k5e8_sunny_chromatix.xml
 
-# Camera chromatix - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera chromatix - from sakura 9.1.26
 vendor/lib/libchromatix_csidtg_common.so
 vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
@@ -1467,7 +1467,7 @@ vendor/lib/libchromatix_sakura_s5k5e8_sunny_snapshot.so
 vendor/lib/libchromatix_sakura_s5k5e8_sunny_zsl_preview_3a.so
 vendor/lib/libchromatix_sakura_s5k5e8_sunny_zsl_video_3a.so
 
-# Camera mmcamera - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera mmcamera - from sakura 9.1.26
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_dcrf.so
@@ -1617,7 +1617,7 @@ vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
-# Camera firmware - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera firmware - from sakura 9.1.26
 vendor/firmware/cpp_firmware_v1_10_0.fw
 vendor/firmware/cpp_firmware_v1_1_1.fw
 vendor/firmware/cpp_firmware_v1_12_0.fw
@@ -1630,26 +1630,30 @@ vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
-# Camera HIDL - from daisy 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ
+# Camera HIDL - from sakura 9.1.26
 vendor/bin/hw/android.hardware.camera.provider@2.4-service
 vendor/lib/camera.device@1.0-impl.so
 vendor/lib/camera.device@3.2-impl.so
 vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.4-external-impl.so
 vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.4-external-impl.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 
-# Display calibration - from sakura MIUI_V10.0.5.0
+# Display calibration - from sakura 9.1.26
 -vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml
 
-# Fingerprint - from sakura MIUI_V10.0.5.0
+# Fingerprint - from sakura 9.1.26
 vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/hw/gf_fingerprint.default.so
 vendor/lib64/libgf_hal.so
