@@ -17,7 +17,7 @@
 LOCAL_PATH := device/xiaomi/sakura
 
 # ANT
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt

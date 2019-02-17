@@ -19,8 +19,7 @@ $(call inherit-product, vendor/xiaomi/sakura/sakura-vendor.mk)
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+    com.dsi.ant.antradio_library
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
