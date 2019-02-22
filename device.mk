@@ -16,6 +16,8 @@
 
 $(call inherit-product, vendor/xiaomi/sakura/sakura-vendor.mk)
 
+-include $(LOCAL_PATH)/prop.mk
+
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -62,18 +64,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=smd \
-    ro.bluetooth.dun=true \
-    ro.bluetooth.hfp.ver=1.7 \
-    ro.bluetooth.sap=true \
-    ro.qualcomm.bt.hci_transport=smd
-
-# CNE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1
-
 # Boot animation
 TARGET_SCREEN_HEIGHT :=2280
 TARGET_SCREEN_WIDTH := 1080
@@ -93,39 +83,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@2.0-service \
     android.hardware.soundtrigger@2.1-impl
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=2 \
-    audio.deep_buffer.media=true \
-    audio.offload.disable=true \
-    audio.offload.min.duration.secs=30 \
-    audio.offload.video=true \
-    persist.vendor.audio.fluence.speaker=true \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.bt.enable.splita2dp=false \
-    ro.af.client_heap_size_kbyte=7168 \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    ro.vendor.audio.sdk.ssr=false \
-    vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.audio.offload.buffer.size.kb=64 \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.offload.track.enable=true \
-    vendor.audio.parser.ip.buffer.size=0 \
-    vendor.audio.playback.mch.downsample=true \
-    vendor.audio.pp.asphere.enabled=false \
-    vendor.audio.safx.pbe.enabled=true \
-    vendor.audio.tunnel.encode=false \
-    vendor.audio.use.sw.alac.decoder=true \
-    vendor.audio.use.sw.ape.decoder=true \
-    vendor.audio_hal.period_size=192 \
-    vendor.voice.conc.fallbackpath=deep-buffer \
-    vendor.voice.path.for.pcm.voip=true \
-    vendor.voice.playback.conc.disabled=true \
-    vendor.voice.record.conc.disabled=false \
-    vendor.voice.voip.conc.disabled=true
 
 # Audio-qcom
 PRODUCT_PACKAGES += \
@@ -169,18 +126,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera.display.lmax=1280x720 \
-    camera.display.umax=1920x1080 \
-    camera.lowpower.record.enable=1 \
-    media.camera.ts.monotonic=1 \
-    persist.camera.gyro.disable=0 \
-    persist.camera.isp.clock.optmz=0 \
-    persist.camera.stats.test=5 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    vidc.enc.dcvs.extra-buff-count=2 \
-    persist.camera.HAL3.enabled=1
-
 PRODUCT_PACKAGES += \
     Snap
 
@@ -212,31 +157,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.egl.hw=0 \
-    debug.enable.sglscale=1 \
-    debug.gralloc.enable_fb_ubwc=1 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=0 \
-    dev.pm.dyn_samplingrate=1 \
-    persist.debug.wfd.enable=1 \
-    persist.demo.hdmirotationlock=false \
-    persist.hwc.enable_vds=1 \
-    persist.hwc.mdpcomp.enable=true \
-    sdm.debug.disable_rotator_split=1 \
-    sdm.debug.disable_skip_validate=1 \
-    sdm.perf_hint_window=50 \
-    ro.opengles.version=196610 \
-    ro.qualcomm.cabl=0 \
-    ro.sf.lcd_density=400
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
 
 # Healthd
 PRODUCT_PACKAGES += \
@@ -274,10 +198,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qcom.svi.sensortype=2
+    android.hardware.sensors@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -339,12 +260,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
-# Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.am.reschedule_service=true \
-    ro.sys.fw.use_trim_settings=true \
-    ro.vendor.extension_library=libqti-perfd-client.so
-
 # Vulkan
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml \
@@ -355,9 +270,6 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libqcomfm_jni \
     qcom.fmradio
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -390,21 +302,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    av.debug.disable.pers.cache=1 \
-    media.aac_51_output_enabled=true \
-    media.msm8956hw=0 \
-    media.stagefright.audio.sink=280 \
-    mm.enable.qcom_parser=1048575 \
-    mm.enable.smoothstreaming=true \
-    mmp.enable.3g2=true \
-    vendor.audio.hw.aac.encoder=true \
-    vendor.vidc.dec.downscalar_height=1088 \
-    vendor.vidc.dec.downscalar_width=1920 \
-    vendor.vidc.disable.split.mode=1 \
-    vendor.vidc.enc.disable.pq=true \
-    vendor.vidc.enc.disable_bframes=1
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -446,51 +343,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    DEVICE_PROVISIONED=1 \
-    persist.data.iwlan.enable=true \
-    persist.dbg.ims_volte_enable=1 \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=0 \
-    persist.radio.aosp_usr_pref_sel=true \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.calls.on.ims=0 \
-    persist.radio.csvt.enabled=false \
-    persist.radio.DROPSETENABLE=1 \
-    persist.radio.force_on_dc=true \
-    persist.radio.ignore_dom_time=5 \
-    persist.radio.hw_mbn_update=0 \
-    persist.radio.jbims=0 \
-    persist.radio.mt_sms_ack=20 \
-    persist.radio.multisim.config=dsds \
-    persist.radio.schd.cache=3500 \
-    persist.radio.sw_mbn_update=0 \
-    persist.radio.videopause.mode=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1 \
-    ril.subscription.types=NV,RUIM \
-    rild.libargs=-d/dev/smd0 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.default_network=20 \
-    vendor.service.qti.ims.enabled=1 \
-    telephony.lteOnCdmaDevice=1 \
-    persist.vendor.ims.dropset_feature=0
-
-# Nitz
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rild.nitz_plmn="" \
-    persist.rild.nitz_long_ons_0="" \
-    persist.rild.nitz_long_ons_1="" \
-    persist.rild.nitz_long_ons_2="" \
-    persist.rild.nitz_long_ons_3="" \
-    persist.rild.nitz_short_ons_0="" \
-    persist.rild.nitz_short_ons_1="" \
-    persist.rild.nitz_short_ons_2="" \
-    persist.rild.nitz_short_ons_3=""
-
 # RIL Wrapper
 PRODUCT_PACKAGES += \
     libril-wrapper
@@ -531,9 +383,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0-v27.so
 
 # Wi-Fi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
-    
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcld80211 \
@@ -550,11 +399,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# Time Services
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true \
-    persist.delta_time.enable=true
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=subdragonzj
