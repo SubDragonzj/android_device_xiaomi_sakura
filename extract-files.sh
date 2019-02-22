@@ -59,7 +59,7 @@ fi
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT" false $clean_vendor
 
-#extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+#extract "$MY_DIR"/proprietary-files-camera.txt "$SRC" "$SECTION"
 #extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
 
 BLOB_ROOT="$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary

@@ -21,32 +21,50 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# ANT+ (vendor) - from sakura 9.1.26
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
+# ANT+ (system) - from enchilada - PKQ1.180716.001
+lib64/com.qualcomm.qti.ant@1.0.so|199481b290856fb63f5c5bf6def426b43309becb
+-lib64/libantradio.so|fb958cb68c99c71455f969afdf96225f5110f0df
+lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
+-lib/libantradio.so|7506f2577f2f1068688b623ca85e432be9c3dac9
 
-# Audio - from sakura 9.1.26
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioalsa.so
-vendor/lib/libdrc.so
-vendor/lib/libqtigef.so
-vendor/lib/libsurround_3mic_proc.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libqtigef.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcvirt.so
+# ANT+ (vendor)
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|d60fdc9dcf9565a60a2a5dffecba1691d9b14ef5
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|3a19c81d66ef1190d0b2f361420d5cbf707cc600
+
+# Audio ACDB - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
+vendor/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb|6291d5e7457a962d9ba7bc0b3a33392abfe2cb27
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|7d233a9a4c9d3e7824114e415c02773385da5719
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|d2bdb61a06db632f2f15bda7a90334ae51624ded
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|4f5537eaadd53c434d34b838f76fda03fbc6fd22
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|181f82dd994e889999ffc004544ced6c1d901c6d
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|7e7d37c292a2b081eaa8b6c0ea88f3bb834a0cf4
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|71b2d317d1d1cc8bfb3bd6c52c7df9d617720bf3
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|12c0aa04541cf104719dfa8412a4682640ea78c2
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|3c6ddbb151ea09cd8a312709e0c89381546a0771
+
+# Audio - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
+vendor/lib/libacdb-fts.so|f140cc5c13855f411d9b944316828b42dd6b7d75
+vendor/lib/libacdbloader.so|52fb25441a742d744f6574d1065ae1b822769c48
+vendor/lib/libacdbrtac.so|8a469a26ed1ecff8e22ee141d98bde97513a6212
+vendor/lib/libadiertac.so|e8e2c208abafc6d6c34717aee3d822bfb3a23f76
+vendor/lib/libadm.so|01e2316dfa1afcb000984e9f68903ba6a1220159
+vendor/lib/libaudcal.so|5a6b0fa75e274b07f2dabdcc7381879e1a59898c
+vendor/lib/libaudioalsa.so|920603e464d518c2a46daf1063a65f45f0236d72
+vendor/lib/libdrc.so|7db89c6858c928457a8731d90ba874420972ec9b
+vendor/lib/libqtigef.so|fc40d4dbae0389afed79d2fcb481d1a49c63b749
+vendor/lib/libsurround_3mic_proc.so|832adfad9f3d414234f1b4cfd32b196fe4082bb9
+vendor/lib/soundfx/libqcbassboost.so|0a730813a7335208a5368f48de4790abda536c59
+vendor/lib/soundfx/libqcreverb.so|3cbf222a205e4ccbe812fc69d580abd2237e64d5
+vendor/lib/soundfx/libqcvirt.so|8f60a539fe18de5944d5f1dcd6d0ec5e56b336ea
+vendor/lib64/libacdb-fts.so|1a298a90fe8007fe1a3b352ff7d19ae73734f3cc
+vendor/lib64/libacdbloader.so|2ecf30ba0171aab7fdc720446238d48048cf6b7e
+vendor/lib64/libacdbrtac.so|c44ff9b9aa63e34ca1b77a5f0bfb6a5e50585048
+vendor/lib64/libadiertac.so|aeaf6f057d26acf342609c714213e1c9b3409774
+vendor/lib64/libaudcal.so|96c43cbe0ac304ea128def709d7f3ea99db7f260
+vendor/lib64/libaudioalsa.so|4a27694b5a6842609a2f2572476b7af032ec7201
+vendor/lib64/libqtigef.so|79e811fd04172b0afda1229d182014be28a146b2
+vendor/lib64/soundfx/libqcbassboost.so|0b92d65381d9722c579ccfda12f86c7e3fcaedd1
+vendor/lib64/soundfx/libqcvirt.so|815b3a7cd762cdb6f162dde12c866acb23cdd022
 
 # Bluetooth - from sakura 9.1.26
 vendor/bin/wcnss_filter
@@ -55,8 +73,6 @@ vendor/lib64/libbt-hidlclient.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # CNE - from sakura 9.1.26
 etc/permissions/cneapiclient.xml
@@ -96,11 +112,12 @@ vendor/lib/com.quicinc.cne.server@1.0.so
 vendor/lib/com.quicinc.cne.server@2.0.so
 vendor/lib/com.quicinc.cne.server@2.1.so
 vendor/lib/com.quicinc.cne.server@2.2.so
-vendor/lib/vendor.qti.hardware.data.latency@1.0.so
-vendor/lib/vendor.qti.latency@2.0.so
-vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
-vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.data.factory@1.0.so
+vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib/vendor.qti.latency@2.0.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
@@ -116,11 +133,12 @@ vendor/lib64/com.quicinc.cne.server@1.0.so
 vendor/lib64/com.quicinc.cne.server@2.0.so
 vendor/lib64/com.quicinc.cne.server@2.1.so
 vendor/lib64/com.quicinc.cne.server@2.2.so
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
-vendor/lib64/vendor.qti.latency@2.0.so
-vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
-vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib64/vendor.qti.data.factory@1.0.so
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
@@ -130,6 +148,14 @@ vendor/lib64/libxml.so
 
 # Charger - from sakura 9.1.26
 vendor/bin/hvdcp_opti
+
+# Consumer IR - from sakura 9.1.26
+vendor/lib64/hw/consumerir.default.so
+
+# Display calibration - from sakura 9.1.26
+-vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml
+-vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml
+-vendor/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml
 
 # DPM - from sakura 9.1.26
 vendor/bin/dpmQmiMgr
@@ -154,6 +180,32 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
+# Fingerprint - from sakura 9.1.26
+lib64/libsoftkeymasterdevice.so:vendor/lib64/libsoftkeymasterdevice.so
+-vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
+vendor/etc/permissions/com.fingerprints.extension.xml
+vendor/framework/com.fingerprints.extension.jar
+vendor/lib64/hw/gf_fingerprint.default.so
+vendor/lib64/hw/fingerprint.default.so
+vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/libgoodixfingerprintd_binder.so
+vendor/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so
+lib/android.hardware.biometrics.fingerprint@2.1.so
+lib64/android.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
+
+# FM Radio - from sakura 9.1.26
+vendor/bin/fm_qsoc_patches
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
 # Gatekeeper - from sakura 9.1.26
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
@@ -177,46 +229,59 @@ vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib/libkeymasterdeviceutils.so
 
-# GPS - from sakura 9.1.26
-vendor/bin/hw/vendor.qti.gnss@1.0-service
-vendor/bin/loc_launcher
-vendor/bin/lowi-server
-vendor/bin/slim_daemon
-vendor/bin/xtra-daemon
-vendor/etc/cacert_location.pem
-vendor/etc/init/vendor.qti.gnss@1.0-service.rc
-vendor/etc/xtra_root_cert.pem
-vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
-vendor/lib64/libalarmservice_jni.so
-vendor/lib64/libdataitems.so
-vendor/lib64/libdrplugin_client.so
-vendor/lib64/lib_drplugin_server.so
-vendor/lib64/libDRPlugin.so
-vendor/lib64/libevent_observer.so
-vendor/lib64/libflp.so
-vendor/lib64/libgdtap.so
-vendor/lib64/libgeofence.so
-vendor/lib64/libizat_client_api.so
-vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
--vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_ds_api.so
-vendor/lib64/libloc_externalDr.so
-vendor/lib64/liblocationservice.so
-vendor/lib64/liblocationservice_glue.so
-vendor/lib64/liblowi_client.so
-vendor/lib64/liblowi_wifihal.so
-vendor/lib64/libquipc_os_api.so
-vendor/lib64/libsensorndkbridge.so
-vendor/lib64/libslimclient.so
-vendor/lib64/libulp2.so
-vendor/lib64/libxtadapter.so
-vendor/lib64/libxtwifi_ulp_adaptor.so
-vendor/lib64/vendor.qti.gnss@1.0.so
-vendor/lib64/vendor.qti.gnss@1.1.so
-vendor/lib64/vendor.qti.gnss@1.2.so
-vendor/lib64/vendor.qti.gnss@2.0.so
-vendor/lib64/vendor.qti.gnss@2.1.so
+# GPS - from Tissot PKQ1.180917.001 V10.0.2.0.PDHMIFK
+etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
+etc/permissions/com.qualcomm.location.xml|78b2c4d3f4d053f7d7b3e27a60a8d9e65ac583c3
+etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
+framework/com.qti.location.sdk.jar|79ec49a9e521631dd6661a62216e1d06947f5ef9
+framework/izat.xt.srv.jar|b6418394481311aac9e1282ff77d6845c45f99da
+lib64/liblocationservice_jni.so|2cdb4f1085e8d71cdcbe3e17673e13a39adf6786
+lib64/libxt_native.so|4f1063ec145b241d74b2178e2aadafa5c9b386b2
+lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
+lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
+lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
+lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
+lib64/vendor.qti.gnss@2.1.so|e7d80a2a46bcda7445d21701ba94983a43ab46af
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk|311daad4717860bacf3fb3e3fa2c2f14b594b467
+vendor/bin/hw/vendor.qti.gnss@1.0-service|049201d8e22064b87eb52df208d8cda7066d140a
+vendor/bin/loc_launcher|23a4470552c0c418662a7d91fa7f593bee767459
+vendor/bin/lowi-server|f83f6ab9b978c618c87d2b5c66854533d0e3a66f
+vendor/bin/slim_daemon|0346d3721c2a0471559d0728c329888e5bad8452
+vendor/bin/xtra-daemon|f4fdd2d7fc56472066b05899340eb19ff67d54b4
+vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
+vendor/etc/init/vendor.qti.gnss@1.0-service.rc|98655e2adc2158a052b0ecf06b065535f0a2aac7
+vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
+vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|27375e1ff018f7fb65b87ee0ff06e3e39c2c13fc
+vendor/lib64/libalarmservice_jni.so|86b5ea03823f037ae79a367f7f1155d4d72ecfb5
+vendor/lib64/libdataitems.so|60f312e84762cd2493a6ac4aa2f8cd715fca7099
+vendor/lib64/libdrplugin_client.so|ba6de3e6a872ec53d7b4e11bd5b9371428a26909
+vendor/lib64/lib_drplugin_server.so|43604ff825782aa381ba903b4192ca47ee7df672
+vendor/lib64/libDRPlugin.so|d60dffb3751b5095ead2747610c6d022d052a560
+vendor/lib64/libevent_observer.so|9f51c7267f4396c5ffedfce0dd5e1007041aeba8
+vendor/lib64/libflp.so|24f95f8b568c393d8b51d7376a62b8e9151f9b9d
+vendor/lib64/libgdtap.so|29b7978c234e7b18f003af756154fb7be24fea56
+vendor/lib64/libgeofence.so|c7250877898a17f4bfdc244f613dd1e1a9397cb6
+vendor/lib64/libizat_client_api.so|853e4ccd91718edac986f755fc9800603d3a284a
+vendor/lib64/libizat_core.so|381f72f4c0030f88e5acaf6a3498d9036fb30215
+vendor/lib64/liblbs_core.so|35bec57afe24f18fedad5ed6b02eaa76a6323419
+-vendor/lib64/libloc_api_v02.so|81ab9d291d14f8ad3e094019f36fb0fa65cb0cdb
+vendor/lib64/libloc_ds_api.so|9d0094be7bdef2dd65bac05ba3ca77c1c90fc9a0
+vendor/lib64/libloc_externalDr.so|0527ae9d0bc5b67a21f337cba66f2e9d89f7383b
+vendor/lib64/liblocationservice.so|ec5ad361788b6e72ba4d8d9ae72732fbd9872d56
+vendor/lib64/liblocationservice_glue.so|a70dcf2912346d4a5f07fe84025404fe866e3d09
+vendor/lib64/liblowi_client.so|34f65f866c950733c72d5a4f0de00580d2ac3cf5
+vendor/lib64/liblowi_wifihal.so|cdb5477319b7acf35978eaae741192392d2c875f
+vendor/lib64/libquipc_os_api.so|0dd27d3164e69f076563b48c3945bcac66833783
+vendor/lib64/libsensorndkbridge.so|f1550d2526654448abf14a8c373f6b4e7dfe2063
+vendor/lib64/libslimclient.so|e92942e916eb8863e1689106dd5d7932c9dcda70
+vendor/lib64/libulp2.so|3456c76c42681ec40f6d158f8d516158bb43c5b1
+vendor/lib64/libxtadapter.so|d404e8c5c6e14a556926ba772ca99aa51cbd6a36
+vendor/lib64/libxtwifi_ulp_adaptor.so|58b20fbdbb500add11784acce0808c7198c96c34
+vendor/lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
+vendor/lib64/vendor.qti.gnss@1.1.so|1edcf36fc3afbc465e53e3b74f99fde1e952f718
+vendor/lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
+vendor/lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
+vendor/lib64/vendor.qti.gnss@2.1.so|e7d80a2a46bcda7445d21701ba94983a43ab46af
 
 # Graphics -from sakura 9.1.26
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
@@ -345,7 +410,10 @@ vendor/bin/energy-awareness
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/bin/msm_irqbalance
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
+vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
 vendor/lib/libperfgluelayer.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
@@ -437,12 +505,80 @@ vendor/lib64/libwvhidl.so
 # Wi-Fi - from sakura 9.1.26
 vendor/bin/wcnss_service
 
-# Consumer IR - from sakura 9.1.26
-vendor/lib64/hw/consumerir.default.so
+# Wi-Fi Display
+bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
+etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+etc/wfdconfig.xml|60a210d323f3f65dd1424cfd517295c522824b7b
+etc/wfdconfigsink.xml|f180a45f69fa2ff01dbaf98c905cff1e9eba903e
+-framework/WfdCommon.jar|3291ce29c033fb9482011767ebebc52c6cf8c265
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib64/extractors/libmmparser.so|38cee1e4fb962dbe97176e84986397fa32a403e2
+lib64/libFileMux.so|c528ef66ce38e8474690b75d6ee1c9380c424be1
+lib64/libmmparser_lite.so|e6cc448614215f4d7b5dc6f36c1336f0044bb3b8
+lib64/libmmosal.so|3d50c7ea56db9c3676be9d6e36e1030386ecdb02
+lib64/libwfdclient.so|c69712162493bdaa8833b5aae342ee4f9b0c2408
+lib64/libwfdnative.so|559148bbb82e1a37883be0926d2d90efe3bf18b8
+lib/extractors/libmmparser.so|4bca55f03b1b21c7dfbf528b7fdb2c84d1d61910
+lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
+lib/libmmparser_lite.so|db9e6dafd466fd0aa3b2d7b387fda38ee9838a08
+lib/libmmosal.so|37719ae5647ef6ec826d06b93e34e0b53c565529
+lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
+lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
+lib/libOmxMux.so|6aff8e6e81331f3d5d3a8d46d342e5b5efc237f3
+lib/libwfdavenhancements.so|56e9d0050d3840bb3b27ce00425bfd67daac01c0
+lib/libwfdcodecv4l2.so|b3a3fb10c2d3a8709badb9b3f6c02d0b961136ab
+lib/libwfdcommonutils.so|4672af5a1537df38149b37671f75f9d53e51cfb5
+lib/libwfdconfigutils.so|70b0ddab92a1dcaa4f0d182c9b4d554eb9c65764
+lib/libwfdmminterface.so|caf012b833585121fed196342c35d24f58940138
+lib/libwfdmmsink.so|83df22a52492696af2943534f31bf12cfb63be8d
+lib/libwfdmmsrc.so|bacc30868f165adf59d483207974cbf945ccb8fa
+lib/libwfdrtsp.so|35d56a25e9fe0ec7756c8b10183491c00cfb5879
+lib/libwfdservice.so|55459dbfe15058871070f9c47a95f1c69c25c468
+lib/libwfdsm.so|cde4e7f9dd29449eb518dd6fb888bb41c2e6e8cc
+lib/libwfduibcinterface.so|334a422ec1520da8488a9c14ae9a721142fe12c4
+lib/libwfduibcsink.so|989ed94f8c0047d85db60acc7b76eb9fb0014270
+lib/libwfduibcsinkinterface.so|f8c191d35178f865777dad9874692a26fae90851
+lib/libwfduibcsrc.so|78bc3258deb8f818c3392d5accdf8e7aac729fdc
+lib/libwfduibcsrcinterface.so|3ce31a3bde36bd5c7dac31ccc1fda8043f482f86
+-priv-app/WfdService/WfdService.apk|faf7643790e30775a05d36176ce2aaabe3e7b199
+vendor/bin/wifidisplayhalservice|959c9f4c35f3967d6ebf9d3c5cb5728ce5e4752f
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|f3add191d48d9285eb1b69433c36bb3edbaf86fe
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|d4426bb8bb6016c932f9cbcafcb1ff8b7121cb10
+vendor/lib/libwfdcommonutils_proprietary.so|d190dd29efbb601933a32dbc0f1f1df00384f077
+vendor/lib/libwfdhaldsmanager.so|0d4207c8c43640ea3c3ab6ecdb82afa528c2fd25
+vendor/lib/libwfdhdcpcp.so|ab6368f49c6acbc8a27aefd50282f267d16addac
+vendor/lib/libwfdmmservice.so|a99c38be9f6a6ce4a2767fb066191c2017fcb341
+vendor/lib/libwfdmodulehdcpsession.so|89fc62ee8f41bde6b2dcc9bcde3e52954ae5253d
+vendor/lib64/libwfdhdcpcp.so|c4f8b9368ca91157695144438d02fe5f31af635d
 
-# USB - from sakura 9.1.26
-etc/firmware/ice40.bin:vendor/firmware/ice40.bin
-
+# QCOM Boost framework blobs
+bin/perfservice
+etc/init/perfservice.rc
+etc/perf/whitelistedapps.xml
+framework/QPerformance.jar
+framework/UxPerformance.jar
+lib/libqti-at.so
+lib/libqti-iopd-client_system.so
+lib/libqti-perfd-client_system.so
+lib/libqti-util_system.so
+lib/libqti_performance.so
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.iop@2.0.so
+lib64/libqti-at.so
+lib64/libqti-iopd-client_system.so
+lib64/libqti-perfd-client_system.so
+lib64/libqti-util_system.so
+lib64/libqti_performance.so
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/vendor.qti.hardware.iop@1.0.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # QMI - from sakura 9.1.26
 etc/permissions/qti_libpermissions.xml
