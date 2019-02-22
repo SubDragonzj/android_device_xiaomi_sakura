@@ -19,6 +19,9 @@ LOCAL_PATH := device/xiaomi/sakura
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
+# APEX image
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Assert
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := sakura
