@@ -554,7 +554,8 @@ PRODUCT_COPY_FILES += \
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
+    persist.timed.enable=true \
+    persist.delta_time.enable=true
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
