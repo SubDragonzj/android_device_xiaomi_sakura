@@ -231,6 +231,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
+    init.qti.fm.sh \
     move_time_data.sh \
     move_wifi_data.sh
 
