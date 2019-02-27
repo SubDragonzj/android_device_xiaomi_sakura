@@ -93,14 +93,20 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.1</version>
         <interface>
             <name>ICryptoFactory</name>
-            <instance>default</instance>
             <instance>widevine</instance>
+            <instance>clearkey</instance>
+            <instance>default</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
-            <instance>default</instance>
             <instance>widevine</instance>
+            <instance>clearkey</instance>
+            <instance>default</instance>
         </interface>
+        <fqname>@1.1::ICryptoFactory/clearkey</fqname>
+        <fqname>@1.1::IDrmFactory/clearkey</fqname>
+        <fqname>@1.1::ICryptoFactory/widevine</fqname>
+        <fqname>@1.1::IDrmFactory/widevine</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -118,8 +124,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
-            <instance>gnss_vendor</instance>
         </interface>
+        <fqname>@1.0::IGnss/default</fqname>
+        <fqname>@1.0::IGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
@@ -381,6 +388,19 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
+        <name>com.qualcomm.qti.wifidisplayhal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDSManager</name>
+            <instance>wifidisplaydshal</instance>
+        </interface>
+        <interface>
+            <name>IHDCPSession</name>
+            <instance>wifidisplayhdcphal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.display.color</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -392,7 +412,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.display.config</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
@@ -457,6 +477,24 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.alarm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAlarm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.latency</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILinkLatency</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.gnss</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -464,6 +502,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
         </interface>
+        <fqname>@1.0::ILocHidlGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
