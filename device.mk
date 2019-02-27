@@ -389,10 +389,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcld80211 \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
