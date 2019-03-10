@@ -37,9 +37,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR_PRODUCT_NAME := sakura
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sakura-user 8.1.0 OPM1.171019.019 V10.0.5.0.ODICNFH release-keys"
+    PRIVATE_BUILD_DESC="sakura-user 9 PKQ1.180917.001 9.2.28 release-keys"
     
-BUILD_FINGERPRINT= "xiaomi/sakura/sakura:8.1.0/OPM1.171019.019/V10.0.5.0.ODICNFH:user/release-keys"
+BUILD_FINGERPRINT= "xiaomi/sakura/sakura:9/PKQ1.180917.001/9.2.28:user/release-keys"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model
