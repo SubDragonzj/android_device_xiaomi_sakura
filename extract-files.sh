@@ -64,7 +64,4 @@ setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT" false $clean_vendor
 
 BLOB_ROOT="$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-# Hax for camera
-patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $BLOB_ROOT/vendor/lib/libvidhance_gyro.so
-
 #"$MY_DIR"/setup-makefiles.sh
