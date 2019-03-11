@@ -67,6 +67,9 @@ USE_OPENGL_RENDERER := true
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_wakeup_gesture"
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
