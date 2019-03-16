@@ -240,12 +240,12 @@ function configure_zram_parameters() {
 
     if [ -f /sys/block/zram0/disksize ]; then
         if [ $MemTotal -le 524288 ]; then
-            echo 1610612736 > /sys/block/zram0/disksize
+            echo 402653184 > /sys/block/zram0/disksize
         elif [ $MemTotal -le 1048576 ]; then
-            echo 1610612736 > /sys/block/zram0/disksize
+            echo 805306368 > /sys/block/zram0/disksize
         else
             # Set Zram disk size=1GB for >=2GB Non-Go targets.
-            echo 1610612736 > /sys/block/zram0/disksize
+            echo 1073741824 > /sys/block/zram0/disksize
         fi
         mkswap /dev/block/zram0
         swapon /dev/block/zram0 -p 32758
@@ -1795,10 +1795,6 @@ case "$target" in
                 # SMP scheduler
                 echo 85 > /proc/sys/kernel/sched_upmigrate
                 echo 85 > /proc/sys/kernel/sched_downmigrate
-
-                #HQ D1s-706 add for touch boost start
-                echo 0:1401600 1:1401600 2:1401600 3:1401600 4:1401600 5:1401600 6:1401600 7:1401600 > /sys/module/cpu_boost/parameters/input_boost_freq
-                #HQ D1s-706 add for touch boost end
 
                 # Set Memory parameters
                 configure_memory_parameters
@@ -4099,12 +4095,6 @@ case "$target" in
     ;;
     "msm8937" | "msm8953")
         setprop vendor.post_boot.parsed 1
-
-        low_ram_enable=`getprop ro.config.low_ram`
-
-        if [ "$low_ram_enable" != "true" ]; then
-        start gamed
-        fi
     ;;
     "msm8974")
         start mpdecision
@@ -4202,20 +4192,3 @@ if [ -f /sys/devices/soc0/select_image ]; then
     echo $image_variant > /sys/devices/soc0/image_variant
     echo $oem_version > /sys/devices/soc0/image_crm_version
 fi
-
-# Change console log level as per console config property
-console_config=`getprop persist.console.silent.config`
-case "$console_config" in
-    "1")
-        echo "Enable console config to $console_config"
-        echo 0 > /proc/sys/kernel/printk
-        ;;
-    *)
-        echo "Enable console config to $console_config"
-        ;;
-esac
-
-# Parse misc partition path and set property
-misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
-real_path=${misc_link##*>}
-setprop persist.vendor.mmi.misc_dev_path $real_path

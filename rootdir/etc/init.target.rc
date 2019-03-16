@@ -30,13 +30,13 @@
 import init.carrier.rc
 
 on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_apr audio_adsp_loader audio_q6_notifier audio_q6 audio_usf audio_native audio_pinctrl_wcd audio_swr audio_platform audio_swr_ctrl audio_hdmi audio_wcd9xxx audio_wcd_core audio_wsa881x_analog audio_wsa881x audio_mbhc audio_stub audio_digital_cdc audio_analog_cdc audio_wcd_cpe audio_cpe_lsm audio_wcd9335 audio_machine_sdm450 audio_machine_ext_sdm450
-    write /proc/sys/kernel/sched_boost 1
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_apr audio_adsp_loader audio_q6_notifier audio_q6 audio_usf audio_native audio_pinctrl_wcd audio_swr audio_platform audio_swr_ctrl audio_hdmi audio_wcd9xxx audio_wcd_core audio_wsa881x_analog audio_wsa881x audio_mbhc audio_stub audio_digital_cdc audio_analog_cdc audio_wcd_cpe audio_wcd9335 audio_machine_sdm450 audio_machine_ext_sdm450
     mkdir /firmware 0771 system system
     mkdir /system 0777 root root
-    mkdir /bt_firmware 0771 system system
+    write /proc/sys/kernel/sched_boost 1
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
+    mkdir /cust 0775 system system
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -45,26 +45,22 @@ on fs
     mount_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
 
-    chown root system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
-    mkdir /mnt/vendor/persist/data 0700 system system
-    mkdir /mnt/vendor/persist/bms 0700 root system
-    restorecon_recursive /mnt/vendor/persist
+    # Keeping following partitions outside fstab file. As user may not have
+    # these partition flashed on the device. Failure to mount any partition in fstab file
+    # results in failure to launch late-start class.
+
+    # wait /dev/block/bootdevice/by-name/persist
+    # mount ext4 /dev/block/bootdevice/by-name/persist /persist noatime nosuid nodev barrier=1
+    # mkdir /persist/data 0700 system system
+    # mkdir /persist/bms 0700 root system
+    # restorecon_recursive /persist
 
     #write /sys/kernel/boot_adsp/boot 1
 
-    wait /dev/block/bootdevice/by-name/oem
-    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev barrier=1
-
-on post-fs
-    start vendor.qseecomd
-    exec - system system -- /vendor/bin/init.qti.qseecomd.sh
-    write /dev/ipa 1
-    insmod /system/lib/modules/exfat.ko
-
-on post-fs
-    # set RLIMIT_MEMLOCK to 64MB
-    setrlimit 8 67108864 67108864
+    wait /dev/block/platform/soc/7824900.sdhci/by-name/cust
+    mount ext4 /dev/block/platform/soc/7824900.sdhci/by-name/cust  /cust rw noatime nosuid nodev barrier=1
+    chown system system /cust
+    chmod 0775 /cust
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
@@ -76,19 +72,25 @@ on post-fs-data
     mkdir /persist/data/tz 0700 system system
     mkdir /data/misc/dts 0770 media audio
     mkdir /data/vendor/hbtp 0750 system system
-    mkdir /data/vendor/tloc 0700 system drmrpc
+    mkdir /persist/data 0700 system system
+    mkdir /persist/bms 0700 root system
+    mkdir /data/thermal 0771 system system
+    mkdir /data/thermal/config 0771 system system
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    restorecon_recursive /persist
 
 
 #Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
-    mkdir /data/misc/camera 0770 camera camera
 
 #start camera server as daemon
 service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+
+    setprop sys.usb.ffs.aio_compat 1
 
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
@@ -125,12 +127,16 @@ service qrngp /system/bin/qrngp -f
 
 on property:sys.boot_completed=1
    start qrngp
-   start charge_logger
 
-service vendor.qseecomd /vendor/bin/qseecomd
+service qseecomd /vendor/bin/qseecomd
    class core
    user root
    group root
+
+# add PcbaConfigSet
+service PcbaConfigSet /system/vendor/bin/PcbaConfigSet
+    class core
+    oneshot
 
 #service aostlmd /system/bin/aostlmd
 #   class late_start
@@ -152,13 +158,11 @@ service gamed /system/vendor/bin/gamed
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
-   chmod 0664 /sys/class/thermal/thermal_message/sconfig
-   chown system system /sys/class/thermal/thermal_message/sconfig
    socket thermal-send-client stream 0666 system system
    socket thermal-recv-client stream 0660 system system
    socket thermal-recv-passive-client stream 0666 system system
    socket thermal-send-rule stream 0660 system system
-   group root
+   group root system diag
 
 service time_daemon /system/vendor/bin/time_daemon
    class late_start
@@ -173,6 +177,14 @@ service audiod /system/vendor/bin/audiod
 on boot
     start rmt_storage
     insmod /system/lib/modules/adsprpc.ko
+
+    write /dev/cpuset/top-app/boost/cpus 4-7
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+
 # access permission for secure touch
     chmod 0660 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
     chmod 0440 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
@@ -183,6 +195,15 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
     chown system system /sys/kernel/hbtp/display_pwr
+
+#USB controller configuration
+    write /sys/module/g_android/parameters/mtp_tx_req_len 131072
+    write /sys/module/g_android/parameters/mtp_rx_req_len 131072
+    write /sys/class/android_usb/android0/f_rndis_qc/rndis_transports BAM2BAM_IPA
+    setprop sys.usb.rndis.func.name "rndis_bam"
+    setprop sys.usb.rmnet.func.name "rmnet_bam"
+    setprop sys.usb.rmnet.inst.name "rmnet"
+    setprop sys.usb.dpl.inst.name "dpl"
 
 # Add a cpuset for the camera daemon
 # We want all cores for camera
@@ -202,6 +223,7 @@ on boot
     chmod 0644 /persist/speccfg/vendor_persist.prop
     chmod 0644 /persist/speccfg/submask
     chmod 0644 /persist/speccfg/partition
+    chmod 0644 /persist/spkr_calibration.bin
     chown system system /persist/speccfg/spec
     chown system system /persist/speccfg/devicetype
     chown system system /persist/speccfg/mbnversion
@@ -211,32 +233,32 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
-# access permission for wlan
-    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
-
-#USB controller configuration
-    write /sys/module/g_android/parameters/mtp_tx_req_len 131072
-    write /sys/module/g_android/parameters/mtp_rx_req_len 131072
-    write /sys/class/android_usb/android0/f_rndis_qc/rndis_transports BAM2BAM_IPA
-    setprop vendor.usb.rndis.func.name "rndis_bam"
-    setprop vendor.usb.rmnet.func.name "rmnet_bam"
-    setprop vendor.usb.rmnet.inst.name "rmnet"
-    setprop vendor.usb.dpl.inst.name "dpl"
-
 service wcnss-service /system/vendor/bin/wcnss_service
     class main
     user system
     group system wifi radio
     oneshot
 
-## imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
+#add keyprovision for HQ-10491 by zhongshengbin 2018-02-23 start
+service mtservice /vendor/bin/mtd
+    class late_start
+
+service mlipayservice /vendor/bin/mlipayd
+    class late_start
+
+service fidocaservice /vendor/bin/fidoca
+    class late_start
+#add keyprovision for HQ-10491 by zhongshengbin 2018-02-23 end
+
 service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
 
-# imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
+on property:vendor.service.qti.ims.enabled=1
+    start vendor.imsqmidaemon
+
 service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
     class main
     user system
@@ -253,9 +275,9 @@ service vendor.ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
    group radio diag inet log
 
 service vendor.imsrcsservice /system/vendor/bin/imsrcsd
-   class main
-   user system
-   group radio diag inet log wakelock
+    class main
+    user system
+    group radio diag inet log wakelock
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
@@ -272,6 +294,9 @@ service ppd /system/vendor/bin/mm-pp-dpps
     user system
     socket pps stream 0660 system system
     group system graphics
+
+on property:vendor.post_boot.parsed=*
+    setprop sys.post_boot.parsed ${vendor.post_boot.parsed}
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
@@ -300,6 +325,9 @@ on charger
     start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
     start vendor.hvdcp_opti
+    # hq log
+    setprop debug.charger.on 1
+
 
 service dts_configurator /system/vendor/bin/dts_configurator
     class late_start
@@ -343,12 +371,6 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
-
 service mdtpd /system/vendor/bin/mdtpd
     class late_start
     user root
@@ -356,7 +378,7 @@ service mdtpd /system/vendor/bin/mdtpd
 
 # add for huaqin ftm test
 service redledon /system/vendor/bin/factory_bin r 1
-    user system
+    user root
     oneshot
     disabled
 
@@ -364,7 +386,7 @@ on property:sys.redledon=1
     start redledon
 
 service redledoff /system/vendor/bin/factory_bin r 0
-    user system
+    user root
     oneshot
     disabled
 
@@ -454,6 +476,26 @@ service getxiaomisn /system/vendor/bin/getsn_xiaomi
     class core
     oneshot
 
+## added by Devine for ap diag begin
+service hwdiag /system/bin/hwdiag
+    class core
+    user root
+    seclabel u:r:hwdiag:s0
+## added by Devine for ap diag end
+
+#add for runintest --start
+service systemcommand /system/bin/systemcommand
+    user root
+    oneshot
+    disabled
+
+on property:sys.systemcommand=start
+    start systemcommand
+
+on property:sys.systemcommand=stop
+    stop systemcommand
+#add for runintest --end
+
 # for factory current test --begin
 service screentimeout /system/bin/sh /system/vendor/etc/init.qcom.screentimeout.sh
     class main
@@ -462,30 +504,92 @@ service screentimeout /system/bin/sh /system/vendor/etc/init.qcom.screentimeout.
     disabled
     seclabel u:r:shell:s0
 
+# hq log start
+service  getaplog /system/bin/getlog -c
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+service  stopaplog /system/bin/getlog -s
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+on property:persist.sys.debug.getaplog=1
+    restart getaplog
+on property:persist.sys.debug.getaplog=0
+    start stopaplog
+
+service  getqxdmlog /system/bin/getlog -q
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+service  stopqxdmlog /system/bin/getlog -x
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+on property:persist.sys.debug.getqxdmlog=1
+    restart getqxdmlog
+on property:persist.sys.debug.getqxdmlog=0
+    start stopqxdmlog
+
+service  cpanrlog  /system/bin/sh /system/etc/cpanrlog.sh
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+service  cptomblog  /system/bin/sh /system/etc/cptomblog.sh
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+service  gettcpdumplog /system/bin/getlog -t
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+service  stoptcpdumplog /system/bin/getlog -p
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+service  getpersistlog /system/bin/getpersistlog
+    class main
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+
+on property:persist.sys.debug.gettcpdump=1
+    restart gettcpdumplog
+on property:persist.sys.debug.gettcpdump=0
+    start stoptcpdumplog
+
+service getalllog /system/bin/sh /system/etc/getalllog.sh
+    disabled
+    user root
+    oneshot
+    seclabel u:r:logoem:s0
+on property:persist.sys.debug.getalllog=1
+    restart getalllog
+on property:persist.sys.debug.getalllog=0
+    stop getalllog
+# hq log end
+
 on property:sys.screentimeout=1
     start screentimeout
 # for factory current test --end
-
 on boot
-    mkdir /dev/cpuset/top-app/boost
-    write /dev/cpuset/top-app/boost/mems 0
-
-    write /dev/cpuset/foreground/cpus 0-2,4-7
-    write /dev/cpuset/foreground/boost/cpus 4-7
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-2
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/top-app/boost/cpus 4-7
-
-    chown system system /dev/cpuset/top-app/boost
-    chown system system /dev/cpuset/top-app/boost/tasks
-
-    chmod 0664 /dev/cpuset/top-app/boost/tasks
-
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
-    #Ignore modem crash
-    write /sys/bus/msm_subsys/devices/subsys4/restart_level related
 
 on boot
     chown system system /sys/class/leds/red/blink
@@ -500,18 +604,12 @@ on boot
     chown system system /sys/class/leds/blue/breath
     chown system system /sys/class/leds/blue/delay_on
     chown system system /sys/class/leds/blue/delay_off
-
-service vendor.tlocd /vendor/bin/tloc_daemon
-    class late_start
-    user system
-    group drmrpc gps net_raw
-
-# add PcbaConfigSet
-service PcbaConfigSet /system/vendor/bin/PcbaConfigSet
-    class core
-    oneshot
-
-
+    #hqlog
+    start getpersistlog
+    #Ignore modem crash 
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level related
+    #Ignore wcnss crash
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level related
 
 service maxcurrent_nocall /system/vendor/bin/factory_bin m 0
     user root
@@ -534,8 +632,14 @@ service scancode /system/vendor/bin/factory_bin qr prop
     user root
     oneshot
 
+on property:persist.audio.chk.cal.spk=1
+    setprop audio.chk.cal.spk 1
+
+on property:persist.audio.chk.cal.spk=2
+    setprop audio.chk.cal.spk 2
+
 service openad /system/vendor/bin/displayf_bin s 1
-    user system
+    user root
     oneshot
     disabled
 
@@ -543,17 +647,9 @@ on property:sys.hq.ad=1
     start openad
 
 service closead /system/vendor/bin/displayf_bin s 0
-    user system
+    user root
     oneshot
     disabled
 
 on property:sys.hq.ad=0
     start closead
-    
-# add charge_logger service for dump charge message
-service charge_logger /vendor/bin/charge_logger
-    class main
-    user system
-    group system system wakelock
-    disabled
-    oneshot
