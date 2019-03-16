@@ -1,4 +1,4 @@
-# ADSP - from sakura 9.1.26
+# ADSP - from sakura 9.2.28
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
@@ -11,7 +11,7 @@ vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 
-# ADSP modules - from sakura 9.1.26
+# ADSP modules - from sakura 9.2.28
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
@@ -66,7 +66,7 @@ vendor/lib64/libqtigef.so|79e811fd04172b0afda1229d182014be28a146b2
 vendor/lib64/soundfx/libqcbassboost.so|0b92d65381d9722c579ccfda12f86c7e3fcaedd1
 vendor/lib64/soundfx/libqcvirt.so|815b3a7cd762cdb6f162dde12c866acb23cdd022
 
-# Bluetooth - from sakura 9.1.26
+# Bluetooth - from sakura 9.2.28
 vendor/bin/wcnss_filter
 vendor/lib64/libbtnv.so
 vendor/lib64/libbt-hidlclient.so
@@ -74,7 +74,7 @@ vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
-# CNE - from sakura 9.1.26
+# CNE - from sakura 9.2.28
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
 framework/cneapiclient.jar
@@ -146,25 +146,25 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
-# Charger - from sakura 9.1.26
+# Charger - from sakura 9.2.28
 vendor/bin/hvdcp_opti
 
-# Consumer IR - from sakura 9.1.26
+# Consumer IR - from sakura 9.2.28
 vendor/lib64/hw/consumerir.default.so
 
-# Display calibration - from sakura 9.1.26
+# Display calibration - from sakura 9.2.28
 -vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml
 
-# DPM - from sakura 9.1.26
+# DPM - from sakura 9.2.28
 vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib/libdpmqmihal.so
 
-# DRM - from sakura 9.1.26
+# DRM - from sakura 9.2.28
 vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/libGPreqcancel.so
@@ -180,7 +180,7 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# Fingerprint - from sakura 9.1.26
+# Fingerprint - from sakura 9.2.28
 lib64/libsoftkeymasterdevice.so:vendor/lib64/libsoftkeymasterdevice.so
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
 vendor/etc/permissions/com.fingerprints.extension.xml
@@ -202,11 +202,11 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
 
-# FM Radio - from sakura 9.1.26
+# FM Radio - from sakura 9.2.28
 vendor/bin/fm_qsoc_patches
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Gatekeeper - from sakura 9.1.26
+# Gatekeeper - from sakura 9.2.28
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -221,7 +221,7 @@ vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
 lib/vendor.qti.hardware.factory@1.0.so:vendor/lib/vendor.qti.hardware.factory@1.0.so
 lib64/vendor.qti.hardware.factory@1.0.so:vendor/lib64/vendor.qti.hardware.factory@1.0.so
 
-# Keymaster - from sakura 9.1.26
+# Keymaster - from sakura 9.2.28
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
@@ -283,7 +283,7 @@ vendor/lib64/vendor.qti.gnss@1.2.so|fc002fdced5768ed97936fde007476c1e9eaabb2
 vendor/lib64/vendor.qti.gnss@2.0.so|58e69a003eb530cf59bbe204251b9652d28a4b89
 vendor/lib64/vendor.qti.gnss@2.1.so|e7d80a2a46bcda7445d21701ba94983a43ab46af
 
-# Graphics -from sakura 9.1.26
+# Graphics -from sakura 9.2.28
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
 lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -341,7 +341,7 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# Graphics firmware - from sakura 9.1.26
+# Graphics firmware - from sakura 9.2.28
 vendor/firmware/a506_zap.b00
 vendor/firmware/a506_zap.b01
 vendor/firmware/a506_zap.b02
@@ -349,14 +349,14 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Ipacm - from sakura 9.1.26
+# Ipacm - from sakura 9.2.28
 vendor/bin/ipacm-diag
 
-# Keystore - from sakura 9.1.26
+# Keystore - from sakura 9.2.28
 vendor/lib/hw/keystore.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 
-# Listen - from sakura 9.1.26
+# Listen - from sakura 9.2.28
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
@@ -364,7 +364,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 
-# Media - from sakura 9.1.26
+# Media - from sakura 9.2.28
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libOmxAacDec.so
@@ -399,11 +399,11 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libvpplibrary.so
 
-# Modem - from sakura 9.1.26
+# Modem - from sakura 9.2.28
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
-# Perf - from sakura 9.1.26
+# Perf - from sakura 9.2.28
 lib/vendor.qti.hardware.perf@1.0.so
 lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
@@ -425,13 +425,13 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf@1.0.so
 
-# Peripheral manager - from sakura 9.1.26
+# Peripheral manager - from sakura 9.2.28
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from sakura 9.1.26
+# Postprocessing - from sakura 9.2.28
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 framework/com.qti.snapdragon.sdk.display.jar
 -lib/vendor.display.color@1.0.so
@@ -454,7 +454,7 @@ vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Power-off alarm - from sakura 9.1.26
+# Power-off alarm - from sakura 9.2.28
 framework/vendor.qti.hardware.alarm-V1.0-java.jar
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
@@ -463,7 +463,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# Sensors - from sakura 9.1.26
+# Sensors - from sakura 9.2.28
 vendor/bin/sensors.qti
 vendor/lib/hw/activity_recognition.msm8953.so
 vendor/lib/libsensor1.so
@@ -476,20 +476,20 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal - from sakura 9.1.26
+# Thermal - from sakura 9.2.28
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 vendor/lib64/libthermalfeature.so
 
-# Time services - from sakura 9.1.26
+# Time services - from sakura 9.2.28
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 -vendor/lib64/libtime_genoff.so
 
-# TUI - from sakura 9.1.26
+# TUI - from sakura 9.2.28
 lib/vendor.qti.hardware.tui_comm@1.0.so
 lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
@@ -497,12 +497,12 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# Widevine - from sakura 9.1.26
+# Widevine - from sakura 9.2.28
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib64/libwvhidl.so
 
-# Wi-Fi - from sakura 9.1.26
+# Wi-Fi - from sakura 9.2.28
 vendor/bin/wcnss_service
 
 # Wi-Fi Display
@@ -551,7 +551,7 @@ vendor/lib/libwfdmmservice.so
 vendor/lib/libwfdmodulehdcpsession.so
 vendor/lib64/libwfdhdcpcp.so
 
-# QMI - from sakura 9.1.26
+# QMI - from sakura 9.2.28
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
 lib/libdiag_system.so
@@ -590,7 +590,7 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
-# Radio - from sakura 9.1.26
+# Radio - from sakura 9.2.28
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
@@ -667,7 +667,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/radio/qcril_database/qcril.db
 
-# Radio - IMS - from sakura 9.1.26
+# Radio - IMS - from sakura 9.2.28
 -priv-app/ims/ims.apk
 lib/com.qualcomm.qti.imscmservice@1.0.so
 lib/com.qualcomm.qti.imscmservice@2.0.so
