@@ -160,6 +160,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1-service.clearkey
 
+# Ebtables
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
+
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
