@@ -113,9 +113,6 @@ TARGET_KERNEL_CONFIG := mokee_sakura_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sakura
 TARGET_USE_SDCLANG := true
 
-# Malloc
-MALLOC_SVELTE := true
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
