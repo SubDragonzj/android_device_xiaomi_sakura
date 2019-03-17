@@ -177,9 +177,6 @@ on boot
 
     setprop ro.telephony.call_ring.multiple false
 
-    #enable camera read sensors data
-    setprop persist.camera.gyro.disable 0
-
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
@@ -302,8 +299,8 @@ on post-fs-data
     # Create directory for voiceprint
     mkdir /data/misc/qvop 0771 system system
 
-    #Create folder for mm-qcamera-daemon
-    mkdir /data/misc/camera 0770 camera camera
+    # Create directory used for camera
+    mkdir /data/vendor/camera 0770 camera camera
 
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
@@ -576,8 +573,6 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
 
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
-    stop vendor.camera-provider-2-4
-    start vendor.camera-provider-2-4
     start wcnss-service
     start cnss_diag
 
@@ -1226,11 +1221,6 @@ service qdmastatsd /system/vendor/bin/qdmastatsd
     class late_start
     user system
     group readproc system net_bw_stats radio
-
-service vppservice /vendor/bin/vppservice
-    class main
-    user media
-    group camera
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
