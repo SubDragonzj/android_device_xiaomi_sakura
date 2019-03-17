@@ -261,9 +261,6 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
-    # Create vpp directory
-    mkdir /persist/vpp 0770 media media
-
     # load WIGIG platform driver
     insmod /vendor/lib/modules/msm_11ad_proxy.ko
 
@@ -301,9 +298,6 @@ on post-fs-data
 
     # Create directory used for camera
     mkdir /data/vendor/camera 0770 camera camera
-
-    mkdir /data/media 0770 media_rw media_rw
-    chown media_rw media_rw /data/media
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -344,9 +338,6 @@ on post-fs-data
     # Create directory for audio delta files
     mkdir /data/vendor/misc/audio/acdbdata 0770 media audio
     mkdir /data/vendor/misc/audio/acdbdata/delta 0770 media audio
-
-    # Create directory used by the DASH client
-    mkdir /data/misc/dash 0770 media audio
 
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
@@ -404,9 +395,6 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-    #Create a folder for SRS to be able to create a usercfg file
-    mkdir /data/data/media 0770 media media
-
     #Create FM dir for patchdownloader
     mkdir /data/misc/fm 0770 system system
     chmod 0770 /data/misc/fm
@@ -451,9 +439,6 @@ on post-fs-data
     # set aggressive read ahead for dm-0 and dm-1 during boot up
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
-
-    # Create vpp directory
-    mkdir /data/vendor/vpp 0770 media media
 
     #Create FTM_AP dir for factory test
     mkdir /data/FTM_AP 0775 system system
@@ -528,8 +513,6 @@ on property:sys.boot_completed=1
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
     #WDSP FW boot sysfs node used by STHAL
-    chown media audio /sys/kernel/wdsp0/boot
-    chown media audio /sys/kernel/wcd_cpe0/fw_name
 
 # corefile limit
 on property:persist.debug.trace=1
@@ -630,20 +613,6 @@ service bt-sap /system/bin/sapd 15
     class late_start
     disabled
     oneshot
-
-service btsnoop /system/bin/btsnoop
-   user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-   class late_start
-   disabled
-   oneshot
-
-service bt_logger /system/bin/bt_logger
-   user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-   class late_start
-   disabled
-   oneshot
 
 service ftmd /system/bin/logwrapper /system/vendor/bin/ftmdaemon
     class late_start
@@ -872,12 +841,6 @@ service wifi_ftmd /system/vendor/bin/wifi_ftmd
 on property:wifi.ftmd.load=true
     insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
 
-service cnss_diag /system/vendor/bin/cnss_diag -q -f
-    class main
-    user system
-    group system wifi inet net_admin sdcard_rw media_rw diag
-    oneshot
-
 # cnss-daemon is used for wcn39XX ,D1S use WCN3660 wlan chip, this doesn't need cnss-daemon
 # so open wifi will start cnss-daemon and  print  CNSS related error log
 # HQ-22624  case 03593581
@@ -1083,48 +1046,6 @@ on property:sys.qbcharger.enable=true
 
 on property:sys.qbcharger.enable=false
     stop qbcharger
-
-service diag_mdlog_start /system/vendor/bin/diag_mdlog
-    class late_start
-    user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
-    class late_start
-    user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service diag_adlog_start /system/vendor/bin/diag_mdlog -f /vendor/etc/audio_log.cfg -o /sdcard/audio_logs/
-    class late_start
-    user shell
-    group system oem_2901 diag sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service diag_adlog_stop /system/vendor/bin/diag_mdlog -k
-    class late_start
-    user shell
-    group system oem_2901 diag sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service diag_gplog_start /system/vendor/bin/diag_mdlog -f /vendor/etc/GNSS.cfg -o /sdcard/gps_logs/
-    class late_start
-    user shell
-    group system oem_2901 diag sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service diag_gplog_stop /system/vendor/bin/diag_mdlog -k
-    class late_start
-    user shell
-    group system oem_2901 diag sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
 
 service qlogd /system/xbin/qlogd
     socket qlogd stream 0662 system system
