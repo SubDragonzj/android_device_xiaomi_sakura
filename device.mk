@@ -229,8 +229,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    init.sakura.rc
+    ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
     init.goodix.sh \
