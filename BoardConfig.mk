@@ -235,4 +235,4 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 include vendor/xiaomi/sakura/BoardConfigVendor.mk
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-02-05
+VENDOR_SECURITY_PATCH := 2019-05-01
