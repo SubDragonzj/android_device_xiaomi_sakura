@@ -26,8 +26,6 @@ TARGET_OTA_ASSERT_DEVICE := sakura
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_sakura
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
-PRODUCT_PACKAGES += \
-    librecovery_updater_sakura
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
