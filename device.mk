@@ -129,7 +129,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0_vendor
 
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+    libshim_camera
 
 # Configstore
 PRODUCT_PACKAGES += \
