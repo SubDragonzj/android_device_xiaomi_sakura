@@ -1,4 +1,4 @@
-# ADSP - from sakura 9.5.30
+# ADSP
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
@@ -11,7 +11,7 @@ vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 
-# ADSP modules - from sakura 9.5.30
+# ADSP modules
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
@@ -100,7 +100,7 @@ vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|94c983b85ba5bcb0902e18f334
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|0d3d5de154e6d40d99a9bbca4cb170dc02bc3902
 vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|81ac65e4317355abe11ee1ccc7d55f73d16ea69a
 
-# Camera firmware- - from sakura 9.5.30
+# Camera firmware-
 vendor/firmware/cpp_firmware_v1_8_0.fw
 vendor/firmware/cpp_firmware_v1_5_0.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
@@ -177,13 +177,13 @@ vendor/lib64/vendor.qti.hardware.factory@1.0.so|7a61c2d4acaf748934d154af3a6b8fe6
 vendor/lib64/vendor.qti.hardware.factory@1.1.so|1bf6d03e47d20df05725dff70c3723d0ac69f4f6
 vendor/lib64/vendor.qti.latency@2.0.so|1b9583d7536064e4f37a4bfeb68f918eaddfee81
 
-# Charger - from sakura 9.5.30
+# Charger
 vendor/bin/hvdcp_opti
 
-# Consumer IR - from sakura 9.5.30
+# Consumer IR
 vendor/lib64/hw/consumerir.default.so
 
-# Display calibration - from sakura 9.5.30
+# Display calibration
 -vendor/etc/qdcm_calib_data_hx8399c_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_ili7807_fhdplus_video_mode_dsi_panel.xml
 -vendor/etc/qdcm_calib_data_otm1911_fhdplus_video_mode_dsi_panel.xml
@@ -212,7 +212,7 @@ vendor/lib64/libsecureui.so|d6ed46e35f5b504e6261478782d6900c4358c9d1
 vendor/lib64/libsecureui_svcsock.so|289c97fa09c4c626bbbc4918108efd3a01932ae0
 vendor/lib64/libssd.so|c7f2ddb2e47d1a3d03ed04e15a883b3ecb8e0b70
 
-# Fingerprint - from sakura 9.5.30
+# Fingerprint
 lib64/libsoftkeymasterdevice.so:vendor/lib64/libsoftkeymasterdevice.so
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
 vendor/etc/permissions/com.fingerprints.extension.xml
@@ -234,7 +234,7 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 etc/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
 
-# FM Radio - from sakura 9.5.30
+# FM Radio
 vendor/bin/fm_qsoc_patches
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
@@ -242,7 +242,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib/hw/gatekeeper.msm8953.so|3746658d0fb38050fb850e4bd91a7c777beda74e
 vendor/lib64/hw/gatekeeper.msm8953.so|aaad6de1e51d86ff822aedb3482f61e0703e3c37
 
-# Keymaster - from sakura 9.5.30
+# Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
@@ -358,7 +358,7 @@ vendor/lib64/libsdm-diag.so|4ec7f55fd8a4a1a316282be57e1d5c1a3a20660d
 vendor/lib64/libsdmextension.so|9d4a0618defa62b182533def624bc7d2496844cd
 vendor/lib64/libtinyxml2_1.so|5eaa71107c3ac981774b523a761246aa18a6a5cf
 
-# Graphics firmware - from sakura 9.5.30
+# Graphics firmware
 vendor/firmware/a506_zap.b00
 vendor/firmware/a506_zap.b01
 vendor/firmware/a506_zap.b02
@@ -366,14 +366,14 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Ipacm - from sakura 9.5.30
+# Ipacm
 vendor/bin/ipacm-diag
 
 # Keystore - from LA.UM.8.6.2.r1-03700-89xx.0
 vendor/lib/hw/keystore.msm8953.so|a10a63a4211a780ce499e27a635b8800e8e8c701
 vendor/lib64/hw/keystore.msm8953.so|e8dded3c500eb785d667ddc0d3010f5aac9cfcd6
 
-# Listen - from sakura 9.5.30
+# Listen
 vendor/lib64/hw/sound_trigger.primary.msm8953.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
@@ -477,7 +477,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|c1c19f5f1489309ab08364247fdb6dfd0bda515f
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|c94277fa0ba7ead6a9e2945d3c1fb71a8b409d09
 
-# Sensors - from sakura 9.5.30
+# Sensors
 vendor/bin/sensors.qti
 vendor/lib/hw/activity_recognition.msm8953.so
 vendor/lib/libsensor1.so
@@ -490,14 +490,14 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal - from sakura 9.5.30
+# Thermal
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 vendor/lib64/libthermalfeature.so
 
-# Time services - from sakura 9.5.30
+# Time services
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
@@ -514,7 +514,7 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|b626d9bbf7043c66c8ef903c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|e3cb732c0bd519988100675edf385d947abf5f6c
 vendor/lib64/libwvhidl.so|4af61fdcf1186700ea7ee23c607fb9ce5fd0f0e8
 
-# Wi-Fi - from sakura 9.5.30
+# Wi-Fi
 vendor/bin/wcnss_service
 
 # Wi-Fi Display - from LA.UM.8.6.2.r1-03700-89xx.0
